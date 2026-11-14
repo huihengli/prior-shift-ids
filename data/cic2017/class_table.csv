@@ -1,0 +1,16 @@
+,raw,unique,train,test,rare
+Benign,2272982,1819041,60000,60000,False
+DDoS,128027,127171,20000,20000,False
+DoS Hulk,231073,165596,20000,20000,False
+PortScan,158930,90169,20000,20000,False
+DoS GoldenEye,10293,10252,7176,3076,False
+DoS Slowhttptest,5499,5164,3615,1549,False
+DoS slowloris,5796,4856,3399,1457,False
+FTP-BruteForce,7938,4258,2981,1277,False
+SSH-BruteForce,5897,3062,2143,919,False
+Bot,1966,1873,1311,562,False
+Web-BruteForce,1507,1363,954,409,True
+Web-XSS,652,621,435,186,True
+Infiltration,36,36,25,11,True
+Web-SQLi,21,15,11,4,True
+Heartbleed,11,11,8,3,True

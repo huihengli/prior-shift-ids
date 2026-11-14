@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9041823136485992,
+  "macro_f1": 0.8420961453338722,
+  "weighted_f1": 0.8975941149409736,
+  "rare_macro_f1": 0.7540175858016938,
+  "rare_macro_recall": 0.8133852072040566,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8660344879654517,
+      "recall": 0.9559,
+      "f1": 0.9087509704815173,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004547044421,
+      "recall": 0.99995,
+      "f1": 0.9996251218354035,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.7058823529411765,
+      "recall": 1.0,
+      "f1": 0.8275862068965517,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8058431952662722,
+      "recall": 0.5512548067192876,
+      "f1": 0.6546689099867804,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999699909973,
+      "recall": 0.9996,
+      "f1": 0.9997499624943742,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.8163265306122449,
+      "recall": 0.9302325581395349,
+      "f1": 0.8695652173913043,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.375,
+      "recall": 0.42857142857142855,
+      "f1": 0.4,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9444444444444444,
+      "recall": 0.8947368421052632,
+      "f1": 0.918918918918919,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.3333333333333335,
+  "rare_macro_precision": 0.7104133319994665,
+  "ap": {
+    "FTP-BruteForce": 0.9880952380952382,
+    "Web-BruteForce": 0.973709417969234,
+    "Web-SQLi": 0.5037684268197229,
+    "Web-XSS": 0.8895025198712222
+  },
+  "rare_macro_ap": 0.8387689006888545,
+  "source": "llm_base_llama_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 8,
+  "train_rows": 122258,
+  "n_synth": 858,
+  "train_time_s": 4.085769640980288
+}

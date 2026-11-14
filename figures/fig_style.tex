@@ -1,0 +1,33 @@
+% 全部论文图共用的样式（颜色固定跟随来源；字号按 elsarticle 正文 10pt 设定）
+% 颜色来自经过色觉校验的分类调色板，顺序固定：
+%   类别权重 = 1 蓝，ROS = 2 橙，SMOTE = 3 青，Qwen = 4 黄，Llama = 5 品红；不增强 = 中性灰
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{plotmarks,calc,patterns,arrows.meta,positioning,shapes.geometric,fit,backgrounds}
+\definecolor{cCW}{HTML}{2A78D6}
+\definecolor{cROS}{HTML}{EB6834}
+\definecolor{cSMOTE}{HTML}{1BAF7A}
+\definecolor{cQWEN}{HTML}{EDA100}
+\definecolor{cLLAMA}{HTML}{E87BA4}
+\definecolor{cNONE}{HTML}{52514E}
+\definecolor{cGRID}{HTML}{E4E3DF}
+\definecolor{cAXIS}{HTML}{8A8984}
+\definecolor{cTEXT}{HTML}{2B2A28}
+\pgfplotsset{
+  paper/.style={
+    font=\footnotesize, color=cTEXT,
+    axis line style={cAXIS, line width=0.4pt},
+    tick style={cAXIS, line width=0.4pt},
+    major tick length=2pt,
+    grid style={cGRID, line width=0.4pt},
+    ymajorgrids,
+    tick label style={font=\scriptsize},
+    label style={font=\footnotesize},
+    title style={font=\footnotesize\bfseries, yshift=-2pt},
+    legend style={font=\scriptsize, draw=none, fill=none, /tikz/every even column/.append style={column sep=8pt}},
+    legend cell align=left,
+  },
+  errbar/.style={error bars/.cd, y dir=both, y explicit,
+    error bar style={line width=0.5pt, cTEXT!75}, error mark options={rotate=90, mark size=1.4pt, line width=0.5pt, cTEXT!75}},
+}

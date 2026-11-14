@@ -1,0 +1,24 @@
+{
+ "dataset": "nf_unsw_v3",
+ "rare": [
+  "Analysis",
+  "Backdoor",
+  "Shellcode",
+  "Worms"
+ ],
+ "n_naive": 2365424,
+ "n_clean": 1004841,
+ "class_naive": {
+  "Analysis": 1226,
+  "Backdoor": 4659,
+  "Shellcode": 2381,
+  "Worms": 158
+ },
+ "class_clean": {
+  "Analysis": 1224,
+  "Backdoor": 3149,
+  "Shellcode": 1975,
+  "Worms": 141
+ },
+ "conflict_rows": 8384
+}

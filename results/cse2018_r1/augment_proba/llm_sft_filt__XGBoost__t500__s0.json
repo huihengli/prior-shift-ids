@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9048054235485693,
+  "macro_f1": 0.8563536232207118,
+  "weighted_f1": 0.8986580351547877,
+  "rare_macro_f1": 0.784698025551684,
+  "rare_macro_recall": 0.8490994929183423,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8681903664159185,
+      "recall": 0.9540833333333333,
+      "f1": 0.9091125651124381,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994502199120352,
+      "recall": 0.99985,
+      "f1": 0.9996500699860028,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8017509586860575,
+      "recall": 0.5606658571139446,
+      "f1": 0.6598779216912312,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9999499799919968,
+      "recall": 0.99955,
+      "f1": 0.999749949989998,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.975609756097561,
+      "recall": 0.9302325581395349,
+      "f1": 0.9523809523809523,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.4444444444444444,
+      "recall": 0.5714285714285714,
+      "f1": 0.5,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.7727272727272727,
+      "recall": 0.8947368421052632,
+      "f1": 0.8292682926829268,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.4999999999999998,
+  "rare_macro_precision": 0.7356953683173195,
+  "ap": {
+    "FTP-BruteForce": 0.8184225496725498,
+    "Web-BruteForce": 0.9645418289199796,
+    "Web-SQLi": 0.5485281269253395,
+    "Web-XSS": 0.9307898330568428
+  },
+  "rare_macro_ap": 0.815570584643678,
+  "source": "llm_sft_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 0,
+  "train_rows": 122728,
+  "n_synth": 1328,
+  "train_time_s": 4.221318413969129
+}

@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9049798943205609,
+  "macro_f1": 0.8499653812903928,
+  "weighted_f1": 0.8979560155645274,
+  "rare_macro_f1": 0.7717460317460317,
+  "rare_macro_recall": 0.8359415981815002,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8645881805490926,
+      "recall": 0.9599666666666666,
+      "f1": 0.9097844715248107,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993501949415176,
+      "recall": 0.99965,
+      "f1": 0.9995000749887517,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.9230769230769231,
+      "recall": 1.0,
+      "f1": 0.96,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.818673368364938,
+      "recall": 0.5439182351750658,
+      "f1": 0.6535947712418301,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999849977497,
+      "recall": 0.99975,
+      "f1": 0.9998249868740156,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.975609756097561,
+      "recall": 0.9302325581395349,
+      "f1": 0.9523809523809523,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.19047619047619047,
+      "recall": 0.5714285714285714,
+      "f1": 0.2857142857142857,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9411764705882353,
+      "recall": 0.8421052631578947,
+      "f1": 0.8888888888888888,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.1666666666666665,
+  "rare_macro_precision": 0.7575848350597274,
+  "ap": {
+    "FTP-BruteForce": 0.9935897435897436,
+    "Web-BruteForce": 0.946880557669873,
+    "Web-SQLi": 0.5049284699921065,
+    "Web-XSS": 0.9312920782348026
+  },
+  "rare_macro_ap": 0.8441727123716315,
+  "source": "v2_llm_sft_relov_filt",
+  "detector": "SAORF",
+  "target": 500,
+  "seed": 3,
+  "train_rows": 122660,
+  "n_synth": 1260,
+  "train_time_s": 16.682503295014612
+}

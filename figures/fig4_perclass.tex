@@ -1,0 +1,55 @@
+% Fig. 4 按类 ΔF1 对真实样本 10-NN 纯度（原划分，10 种子；点 = 4 个检测器的均值，竖线 = 4 个检测器的最小–最大）
+% 数据：data/fig4_<来源>.dat（由 prep_figs.py 生成）；编译：pdflatex fig4_perclass.tex
+\documentclass[10pt]{standalone}
+\input{fig_style}
+\begin{document}
+\begin{tikzpicture}
+\pgfplotsset{
+  discard if not/.style 2 args={x filter/.append code={%
+      \edef\tempa{\thisrow{#1}}\edef\tempb{#2}%
+      \ifx\tempa\tempb\else\def\pgfmathresult{inf}\fi}},
+  f4/.style={paper, xmajorgrids,
+    xmin=-0.03, xmax=1.03, xtick={0,0.5,1}, xticklabels={0, 0.5, 1},
+    ymin=-0.33, ymax=0.23, ytick={-0.3,-0.2,...,0.2},
+    scaled y ticks=false,
+    yticklabel style={/pgf/number format/fixed, /pgf/number format/fixed zerofill, /pgf/number format/precision=1, /pgf/number format/showpos},
+    extra y ticks={0}, extra y tick labels={},
+    extra y tick style={grid=major, major grid style={cTEXT!70, line width=0.6pt}},
+    error bars/y dir=both, error bars/y explicit,
+    error bars/error bar style={line width=0.6pt},
+    error bars/error mark=none},
+  ds0/.style={only marks, mark=*, mark size=1.9pt, discard if not={dsid}{0}},
+  ds1/.style={only marks, mark=square*, mark size=1.7pt, discard if not={dsid}{1}},
+  ds2/.style={only marks, mark=triangle*, mark size=2.3pt, discard if not={dsid}{2}},
+}
+\newcommand{\fourpanel}[2]{% #1 = 来源键名，#2 = 颜色
+  \addplot[ds0, #2, mark options={fill=#2, draw=white, line width=0.3pt}, error bars/error bar style={#2!75!black}] table[x=real_purity, y=mean, y error plus=eplus, y error minus=eminus]{data/fig4_#1.dat};
+  \addplot[ds1, #2, mark options={fill=#2, draw=white, line width=0.3pt}, error bars/error bar style={#2!75!black}] table[x=real_purity, y=mean, y error plus=eplus, y error minus=eminus]{data/fig4_#1.dat};
+  \addplot[ds2, #2, mark options={fill=#2, draw=white, line width=0.3pt}, error bars/error bar style={#2!75!black}] table[x=real_purity, y=mean, y error plus=eplus, y error minus=eminus]{data/fig4_#1.dat};
+  \draw[cAXIS, dashed, line width=0.5pt] (axis cs:0.5,-0.33) -- (axis cs:0.5,0.23);
+}
+\begin{groupplot}[
+  group style={group size=5 by 1, horizontal sep=0.32cm, y descriptions at=edge left},
+  width=3.95cm, height=5.0cm,
+]
+\nextgroupplot[f4, title={Class weight}, ylabel={$\Delta$F1 vs.\ no augmentation (per class)}, ylabel style={yshift=-3pt}]
+  \fourpanel{cw}{cCW}
+\nextgroupplot[f4, title={ROS}, xlabel={10-NN class purity of real training samples}, xlabel style={xshift=2.05cm}]
+  \fourpanel{ros}{cROS}
+\nextgroupplot[f4, title={SMOTE}]
+  \fourpanel{smote}{cSMOTE}
+  % CIC Web-SQLi 的 SMOTE 均值 −0.445 超出纵轴范围：在底部用箭头标出
+  \draw[-{Latex[length=3pt]}, cSMOTE!75!black, line width=0.6pt] (axis cs:0.073,-0.24) -- (axis cs:0.073,-0.322);
+  \node[font=\tiny, anchor=west, align=left, cTEXT, inner sep=1pt] at (axis cs:0.10,-0.285) {$-0.45$\\CIC Web-SQLi};
+\nextgroupplot[f4, title={LLM (Qwen)}]
+  \fourpanel{qwen}{cQWEN}
+\nextgroupplot[f4, title={LLM (Llama)}]
+  \fourpanel{llama}{cLLAMA}
+\end{groupplot}
+% 数据集图例（形状）
+\node[anchor=south, font=\scriptsize] at ($(group c3r1.north)+(0,0.78cm)$) {%
+  \tikz[baseline=-0.6ex]\fill[cNONE] (0,0) circle (1.9pt);~CSE-CIC-IDS2018\qquad
+  \tikz[baseline=-0.6ex]\fill[cNONE] (-1.7pt,-1.7pt) rectangle (1.7pt,1.7pt);~NF-UNSW-NB15-v3\qquad
+  \tikz[baseline=-0.6ex]\fill[cNONE] (-2pt,-1.6pt) -- (2pt,-1.6pt) -- (0,2pt) -- cycle;~CIC-IDS2017};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.895666478349008,
+  "macro_f1": 0.8228969848406964,
+  "weighted_f1": 0.8926009098420005,
+  "rare_macro_f1": 0.7134856959471851,
+  "rare_macro_recall": 0.8222591362126246,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8761948543981738,
+      "recall": 0.9212166666666667,
+      "f1": 0.898141904243478,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994999499949995,
+      "recall": 0.9994,
+      "f1": 0.9994499724986249,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 0.9961612284069098,
+      "recall": 1.0,
+      "f1": 0.9980769230769231,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.5217391304347826,
+      "recall": 1.0,
+      "f1": 0.6857142857142857,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.7176089693626716,
+      "recall": 0.6055960331916616,
+      "f1": 0.656861399994512,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999399639784,
+      "recall": 0.9993,
+      "f1": 0.9995998799639892,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9487179487179487,
+      "recall": 0.8604651162790697,
+      "f1": 0.9024390243902439,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.25,
+      "recall": 0.42857142857142855,
+      "f1": 0.3157894736842105,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9047619047619048,
+      "recall": 1.0,
+      "f1": 0.95,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.3333333333333335,
+  "rare_macro_precision": 0.656304745978659,
+  "ap": {
+    "FTP-BruteForce": 0.8486133262449053,
+    "Web-BruteForce": 0.9457999614548671,
+    "Web-SQLi": 0.3091617333064595,
+    "Web-XSS": 0.9544623098191616
+  },
+  "rare_macro_ap": 0.7645093327063484,
+  "source": "great",
+  "detector": "RF-grid",
+  "target": 500,
+  "seed": 9,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 32.81198509200476
+}

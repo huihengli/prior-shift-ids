@@ -1,0 +1,55 @@
+{
+  "accuracy": 0.9864653418870286,
+  "macro_f1": 0.8301143001753648,
+  "weighted_f1": 0.9870604313223226,
+  "rare_macro_f1": 0.7882522459874647,
+  "rare_macro_recall": 0.7980361145557182,
+  "per_class": {
+    "Benign": {
+      "precision": 0.997022466841108,
+      "recall": 0.9981031523800922,
+      "f1": 0.9975625169269657,
+      "support": 11071
+    },
+    "MITM": {
+      "precision": 0.9345794392523364,
+      "recall": 0.9389671361502347,
+      "f1": 0.936768149882904,
+      "support": 213
+    },
+    "PortScan-Multi": {
+      "precision": 0.9176672384219554,
+      "recall": 0.8713355048859935,
+      "f1": 0.8939014202172096,
+      "support": 614
+    },
+    "PortScan-Single": {
+      "precision": 0.29,
+      "recall": 0.4027777777777778,
+      "f1": 0.3372093023255814,
+      "support": 72
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9912718204488778,
+      "recall": 0.979064039408867,
+      "f1": 0.9851301115241635,
+      "support": 812
+    }
+  },
+  "fp_benign_per_10k": 18.968476199078673,
+  "rare_macro_precision": 0.7833796245307925,
+  "ap": {
+    "MITM": 0.9895786918738583,
+    "PortScan-Multi": 0.9609812504557629,
+    "PortScan-Single": 0.26014221641186536,
+    "SSH-BruteForce": 0.9984345815702893
+  },
+  "rare_macro_ap": 0.802284185077944,
+  "source": "smote",
+  "detector": "SAORF",
+  "target": 3000,
+  "seed": 7,
+  "train_rows": 37878,
+  "n_synth": 7916,
+  "train_time_s": 10.9750959590001
+}

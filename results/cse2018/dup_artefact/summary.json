@@ -1,0 +1,24 @@
+{
+ "dataset": "cse2018",
+ "rare": [
+  "FTP-BruteForce",
+  "Web-BruteForce",
+  "Web-SQLi",
+  "Web-XSS"
+ ],
+ "n_naive": 3476811,
+ "n_clean": 2149207,
+ "class_naive": {
+  "FTP-BruteForce": 193360,
+  "Web-BruteForce": 249,
+  "Web-SQLi": 34,
+  "Web-XSS": 79
+ },
+ "class_clean": {
+  "FTP-BruteForce": 41,
+  "Web-BruteForce": 144,
+  "Web-SQLi": 23,
+  "Web-XSS": 62
+ },
+ "conflict_rows": 40276
+}

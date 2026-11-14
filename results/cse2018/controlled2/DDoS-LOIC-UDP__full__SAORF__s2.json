@@ -1,0 +1,22 @@
+{
+  "class": "DDoS-LOIC-UDP",
+  "n": 1211,
+  "detector": "SAORF",
+  "seed": 2,
+  "none": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "ap": 1.0,
+    "fp_benign_per_10k": 0.0,
+    "matched": {
+      "k_test": 519,
+      "f1": 1.0,
+      "f1_sd": 0.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "ap": 1.0,
+      "fp_other": 0
+    }
+  }
+}

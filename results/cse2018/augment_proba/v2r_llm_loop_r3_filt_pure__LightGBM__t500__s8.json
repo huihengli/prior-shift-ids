@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9045727958525805,
+  "macro_f1": 0.8707349119751433,
+  "weighted_f1": 0.8970921111738052,
+  "rare_macro_f1": 0.821105021105021,
+  "rare_macro_recall": 0.8490994929183423,
+  "per_class": {
+    "Benign": {
+      "precision": 0.862686477921612,
+      "recall": 0.9618666666666666,
+      "f1": 0.9095809232612019,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004896572399,
+      "recall": 1.0,
+      "f1": 0.99965012245714,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9884393063583815,
+      "f1": 0.9941860465116279,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8232731798382078,
+      "recall": 0.5355191256830601,
+      "f1": 0.6489270386266094,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999899989999,
+      "recall": 0.9998,
+      "f1": 0.999849992499625,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.8888888888888888,
+      "recall": 0.9302325581395349,
+      "f1": 0.9090909090909091,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.5,
+      "recall": 0.5714285714285714,
+      "f1": 0.5333333333333333,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9444444444444444,
+      "recall": 0.8947368421052632,
+      "f1": 0.918918918918919,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.0,
+  "rare_macro_precision": 0.7976190476190477,
+  "ap": {
+    "FTP-BruteForce": 0.9811507936507936,
+    "Web-BruteForce": 0.9678294401424594,
+    "Web-SQLi": 0.5541928133391547,
+    "Web-XSS": 0.9097842001479772
+  },
+  "rare_macro_ap": 0.8532393118200963,
+  "source": "v2r_llm_loop_r3_filt_pure",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 8,
+  "train_rows": 122666,
+  "n_synth": 1266,
+  "train_time_s": 4.732021178002469
+}

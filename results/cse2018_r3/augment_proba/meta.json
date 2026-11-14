@@ -1,0 +1,19 @@
+{
+  "labels": [
+    "Benign",
+    "DDoS-HOIC",
+    "DDoS-LOIC-UDP",
+    "FTP-BruteForce",
+    "Infiltration",
+    "SSH-BruteForce",
+    "Web-BruteForce",
+    "Web-SQLi",
+    "Web-XSS"
+  ],
+  "rare": [
+    "FTP-BruteForce",
+    "Web-BruteForce",
+    "Web-SQLi",
+    "Web-XSS"
+  ]
+}

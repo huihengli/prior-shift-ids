@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9043567844205909,
+  "macro_f1": 0.816775967062619,
+  "weighted_f1": 0.8964877010295295,
+  "rare_macro_f1": 0.6998784261715296,
+  "rare_macro_recall": 0.8265431019408986,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8609916199038448,
+      "recall": 0.9640666666666666,
+      "f1": 0.9096184238459543,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994502748625688,
+      "recall": 0.99995,
+      "f1": 0.9997000749812547,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9942196531791907,
+      "f1": 0.9971014492753624,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.75,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8305719292655728,
+      "recall": 0.5275753895972475,
+      "f1": 0.6452750789033975,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999749937484,
+      "recall": 0.99965,
+      "f1": 0.9997749718714839,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9090909090909091,
+      "recall": 0.9302325581395349,
+      "f1": 0.9195402298850575,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.13636363636363635,
+      "recall": 0.42857142857142855,
+      "f1": 0.20689655172413793,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9,
+      "recall": 0.9473684210526315,
+      "f1": 0.9230769230769231,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 3.1666666666666665,
+  "rare_macro_precision": 0.6363636363636364,
+  "ap": {
+    "FTP-BruteForce": 0.9518259518259518,
+    "Web-BruteForce": 0.9494451595517318,
+    "Web-SQLi": 0.17014713856863545,
+    "Web-XSS": 0.9501097111766399
+  },
+  "rare_macro_ap": 0.7553819902807397,
+  "source": "tvae",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 3,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 7.159695693000685
+}

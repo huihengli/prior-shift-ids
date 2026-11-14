@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9051211325645542,
+  "macro_f1": 0.8511836402109381,
+  "weighted_f1": 0.8977583963504077,
+  "rare_macro_f1": 0.7748773394428229,
+  "rare_macro_recall": 0.7944133589788424,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8634629482786995,
+      "recall": 0.9618833333333333,
+      "f1": 0.9100197888662005,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.999450247388675,
+      "recall": 0.9999,
+      "f1": 0.9996750731085505,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8888888888888888,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8244268897149938,
+      "recall": 0.5386055454361466,
+      "f1": 0.6515485371526503,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998500149985001,
+      "recall": 0.99995,
+      "f1": 0.99990000499975,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9069767441860465,
+      "recall": 0.9069767441860465,
+      "f1": 0.9069767441860465,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.5,
+      "recall": 0.42857142857142855,
+      "f1": 0.46153846153846156,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.8421052631578947,
+      "recall": 0.8421052631578947,
+      "f1": 0.8421052631578947,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.3333333333333335,
+  "rare_macro_precision": 0.7622705018359853,
+  "ap": {
+    "FTP-BruteForce": 0.9658730158730161,
+    "Web-BruteForce": 0.9201541914283582,
+    "Web-SQLi": 0.48862372741071197,
+    "Web-XSS": 0.812121935336176
+  },
+  "rare_macro_ap": 0.7966932175120656,
+  "source": "llm_sft_filt",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 4,
+  "train_rows": 122761,
+  "n_synth": 1361,
+  "train_time_s": 4.412387864023913
+}

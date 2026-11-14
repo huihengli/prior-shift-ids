@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.8935562128211093,
+  "macro_f1": 0.8536568942322094,
+  "weighted_f1": 0.890775151377286,
+  "rare_macro_f1": 0.7840430402930403,
+  "rare_macro_recall": 0.851328903654485,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8760517593064763,
+      "recall": 0.9162333333333333,
+      "f1": 0.8956921272158499,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9995499324898734,
+      "recall": 0.9994,
+      "f1": 0.9994749606220467,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9980732177263969,
+      "f1": 0.9990356798457087,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.7056574923547401,
+      "recall": 0.6071139445456385,
+      "f1": 0.6526871192341166,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.99985,
+      "recall": 0.99985,
+      "f1": 0.99985,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.8936170212765957,
+      "recall": 0.9767441860465116,
+      "f1": 0.9333333333333333,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.3333333333333333,
+      "recall": 0.42857142857142855,
+      "f1": 0.375,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.8260869565217391,
+      "recall": 1.0,
+      "f1": 0.9047619047619048,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.1666666666666665,
+  "rare_macro_precision": 0.7275450420686314,
+  "ap": {
+    "FTP-BruteForce": 0.9230769230769231,
+    "Web-BruteForce": 0.9837864395676383,
+    "Web-SQLi": 0.5373810736153641,
+    "Web-XSS": 0.8933769831276757
+  },
+  "rare_macro_ap": 0.8344053548469003,
+  "source": "llm_sft_llama_filt",
+  "detector": "RF-grid",
+  "target": 500,
+  "seed": 0,
+  "train_rows": 122722,
+  "n_synth": 1322,
+  "train_time_s": 27.752257624990307
+}

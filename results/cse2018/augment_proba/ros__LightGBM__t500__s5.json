@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9047223422285733,
+  "macro_f1": 0.8489970879032501,
+  "weighted_f1": 0.8971614824775006,
+  "rare_macro_f1": 0.7719144122460768,
+  "rare_macro_recall": 0.8133852072040566,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8624850657108721,
+      "recall": 0.9625333333333334,
+      "f1": 0.9097668557025835,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004896572399,
+      "recall": 1.0,
+      "f1": 0.99965012245714,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9903660886319846,
+      "f1": 0.995159728944821,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8259169468991945,
+      "recall": 0.5343553936450112,
+      "f1": 0.6488894350403982,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.99985,
+      "recall": 0.99985,
+      "f1": 0.99985,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9523809523809523,
+      "recall": 0.9302325581395349,
+      "f1": 0.9411764705882353,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.6,
+      "recall": 0.42857142857142855,
+      "f1": 0.5,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.6071428571428571,
+      "recall": 0.8947368421052632,
+      "f1": 0.723404255319149,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.4999999999999998,
+  "rare_macro_precision": 0.7541666666666667,
+  "ap": {
+    "FTP-BruteForce": 0.973575036075036,
+    "Web-BruteForce": 0.9648945448865748,
+    "Web-SQLi": 0.4811302669844167,
+    "Web-XSS": 0.9441919191919192
+  },
+  "rare_macro_ap": 0.8409479417844867,
+  "source": "ros",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 5,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 4.6944788550026715
+}

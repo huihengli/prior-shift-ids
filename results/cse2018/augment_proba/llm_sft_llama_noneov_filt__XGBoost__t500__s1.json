@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9044814064005849,
+  "macro_f1": 0.8417510365558772,
+  "weighted_f1": 0.8975921599575356,
+  "rare_macro_f1": 0.7535127411288403,
+  "rare_macro_recall": 0.8359415981815002,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8649197490936987,
+      "recall": 0.9583166666666667,
+      "f1": 0.9092260375240159,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004547044421,
+      "recall": 0.99995,
+      "f1": 0.9996251218354035,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8131031363088058,
+      "recall": 0.5456891317547056,
+      "f1": 0.6530822332566307,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999749937484,
+      "recall": 0.99965,
+      "f1": 0.9997749718714839,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9523809523809523,
+      "recall": 0.9302325581395349,
+      "f1": 0.9411764705882353,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.21052631578947367,
+      "recall": 0.5714285714285714,
+      "f1": 0.3076923076923077,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.8421052631578947,
+      "recall": 0.8421052631578947,
+      "f1": 0.8421052631578947,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.3333333333333335,
+  "rare_macro_precision": 0.7155388471177944,
+  "ap": {
+    "FTP-BruteForce": 0.9811507936507937,
+    "Web-BruteForce": 0.9620241331204786,
+    "Web-SQLi": 0.5867926656801715,
+    "Web-XSS": 0.8883194529572771
+  },
+  "rare_macro_ap": 0.8545717613521803,
+  "source": "llm_sft_llama_noneov_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 1,
+  "train_rows": 122670,
+  "n_synth": 1270,
+  "train_time_s": 4.119510470947716
+}

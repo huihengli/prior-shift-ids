@@ -1,0 +1,33 @@
+{
+  "raw_rows": 3476837,
+  "after_clean": 3476811,
+  "raw_label_counts": {
+    "Benign": 2314695,
+    "DDoS-HOIC": 686012,
+    "FTP-BruteForce": 193360,
+    "SSH-BruteForce": 187589,
+    "Infiltration": 93063,
+    "DDoS-LOIC-UDP": 1730,
+    "Web-BruteForce": 249,
+    "Web-XSS": 79,
+    "Web-SQLi": 34
+  },
+  "after_dedup": 2189483,
+  "conflict_rows_removed": 40276,
+  "final_unique_rows": 2149207,
+  "dedup_label_counts": {
+    "Benign": 1818023,
+    "DDoS-HOIC": 172492,
+    "SSH-BruteForce": 90812,
+    "Infiltration": 65880,
+    "DDoS-LOIC-UDP": 1730,
+    "Web-BruteForce": 144,
+    "Web-XSS": 62,
+    "FTP-BruteForce": 41,
+    "Web-SQLi": 23
+  },
+  "dropped_classes": [],
+  "train_rows": 121400,
+  "test_rows": 120364,
+  "train_test_overlap": 0
+}

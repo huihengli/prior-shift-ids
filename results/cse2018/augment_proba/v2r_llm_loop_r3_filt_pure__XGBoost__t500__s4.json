@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9046392609085773,
+  "macro_f1": 0.8751003547160602,
+  "weighted_f1": 0.8978993904046985,
+  "rare_macro_f1": 0.8281043281043281,
+  "rare_macro_recall": 0.8359415981815002,
+  "per_class": {
+    "Benign": {
+      "precision": 0.865683112812321,
+      "recall": 0.9574166666666667,
+      "f1": 0.909241994966682,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004547044421,
+      "recall": 0.99995,
+      "f1": 0.9996251218354035,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8106332138590203,
+      "recall": 0.5492815219591176,
+      "f1": 0.6548437688502835,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9997999899994999,
+      "recall": 0.99975,
+      "f1": 0.9997749943748594,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.8888888888888888,
+      "recall": 0.9302325581395349,
+      "f1": 0.9090909090909091,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5714285714285714,
+      "f1": 0.6153846153846154,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.8888888888888888,
+      "recall": 0.8421052631578947,
+      "f1": 0.8648648648648649,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.1666666666666667,
+  "rare_macro_precision": 0.8253968253968254,
+  "ap": {
+    "FTP-BruteForce": 0.9811507936507937,
+    "Web-BruteForce": 0.9769496228193228,
+    "Web-SQLi": 0.5931844424835079,
+    "Web-XSS": 0.8722708656529577
+  },
+  "rare_macro_ap": 0.8558889311516455,
+  "source": "v2r_llm_loop_r3_filt_pure",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 4,
+  "train_rows": 122666,
+  "n_synth": 1266,
+  "train_time_s": 4.417992028000299
+}

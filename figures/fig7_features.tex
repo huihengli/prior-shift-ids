@@ -1,0 +1,43 @@
+% Fig. 7 10 维紧凑特征 vs 完整特征（CSE 73 / NF 50 / CIC 74 维），5 种子均值
+% 圆点 = 不增强；横条 = 类别权重 / ROS / SMOTE 三种增强的最小–最大范围
+% 数据：data/fig7_rare_f1.dat、data/fig7_rare_ap.dat（由 prep_figs.py 生成）；编译：pdflatex fig7_features.tex
+\documentclass[10pt]{standalone}
+\input{fig_style}
+\definecolor{cFULL}{HTML}{008300}
+\definecolor{cD10}{HTML}{8A8984}
+\begin{document}
+\begin{tikzpicture}
+\pgfplotsset{
+  f7/.style={paper, ymajorgrids=false, xmajorgrids,
+    ymin=-0.6, ymax=8.6, ytick={0,...,8},
+    xticklabel style={/pgf/number format/fixed, /pgf/number format/fixed zerofill, /pgf/number format/precision=1},
+    scaled x ticks=false},
+  span/.style={draw=none, mark=none, error bars/x dir=both, error bars/x explicit, error bars/error mark=none,
+    error bars/error bar style={line width=3.2pt, #1, line cap=round}},
+}
+\begin{groupplot}[
+  group style={group size=2 by 1, horizontal sep=0.6cm, y descriptions at=edge left},
+  width=7.6cm, height=6.0cm,
+]
+\nextgroupplot[f7, title={Rare-class macro-F1}, xmin=0.4, xmax=1.0, xtick={0.4,0.5,...,1.0},
+  yticklabels={CIC · XGB, CIC · LGBM, CIC · SAORF, NF · XGB, NF · LGBM, NF · SAORF, CSE · XGB, CSE · LGBM, CSE · SAORF},
+  legend style={at={(1.0,-0.17)}, anchor=north, legend columns=2, /tikz/every even column/.append style={column sep=8pt}}]
+  \addplot[span=cD10!35, forget plot] table[x=mid10, y expr=\thisrow{y}+0.13, x error=half10]{data/fig7_rare_f1.dat};
+  \addplot[span=cFULL!30, forget plot] table[x=midfull, y expr=\thisrow{y}-0.13, x error=halffull]{data/fig7_rare_f1.dat};
+  \addplot[only marks, mark=o, mark size=2.2pt, mark options={cNONE, line width=0.7pt, fill=white}] table[x=none10, y expr=\thisrow{y}+0.13]{data/fig7_rare_f1.dat};
+  \addplot[only marks, mark=*, mark size=2.2pt, mark options={cFULL, draw=white, line width=0.3pt}] table[x=nonefull, y expr=\thisrow{y}-0.13]{data/fig7_rare_f1.dat};
+  \addlegendimage{line width=3.2pt, cD10!35}
+  \addlegendimage{line width=3.2pt, cFULL!30}
+  \legend{No augmentation (10 features), No augmentation (full features), Augmentation range (10 features), Augmentation range (full features)}
+  \draw[cGRID, line width=0.5pt] (axis cs:0.4,2.5) -- (axis cs:1.0,2.5);
+  \draw[cGRID, line width=0.5pt] (axis cs:0.4,5.5) -- (axis cs:1.0,5.5);
+\nextgroupplot[f7, title={Rare-class PR-AUC}, xmin=0.4, xmax=1.0, xtick={0.4,0.5,...,1.0}]
+  \addplot[span=cD10!35, forget plot] table[x=mid10, y expr=\thisrow{y}+0.13, x error=half10]{data/fig7_rare_ap.dat};
+  \addplot[span=cFULL!30, forget plot] table[x=midfull, y expr=\thisrow{y}-0.13, x error=halffull]{data/fig7_rare_ap.dat};
+  \addplot[only marks, mark=o, mark size=2.2pt, mark options={cNONE, line width=0.7pt, fill=white}] table[x=none10, y expr=\thisrow{y}+0.13]{data/fig7_rare_ap.dat};
+  \addplot[only marks, mark=*, mark size=2.2pt, mark options={cFULL, draw=white, line width=0.3pt}] table[x=nonefull, y expr=\thisrow{y}-0.13]{data/fig7_rare_ap.dat};
+  \draw[cGRID, line width=0.5pt] (axis cs:0.4,2.5) -- (axis cs:1.0,2.5);
+  \draw[cGRID, line width=0.5pt] (axis cs:0.4,5.5) -- (axis cs:1.0,5.5);
+\end{groupplot}
+\end{tikzpicture}
+\end{document}

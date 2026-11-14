@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9043983250805889,
+  "macro_f1": 0.8781835250023503,
+  "weighted_f1": 0.8965820777676838,
+  "rare_macro_f1": 0.838399100899101,
+  "rare_macro_recall": 0.8754152823920265,
+  "per_class": {
+    "Benign": {
+      "precision": 0.86130810488677,
+      "recall": 0.9635166666666667,
+      "f1": 0.9095500314663311,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994003298185997,
+      "recall": 0.99995,
+      "f1": 0.9996750893504286,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9903660886319846,
+      "f1": 0.995159728944821,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8281348955034832,
+      "recall": 0.5292956891317547,
+      "f1": 0.6458204716631682,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.99985,
+      "recall": 0.99985,
+      "f1": 0.99985,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.8888888888888888,
+      "recall": 0.9302325581395349,
+      "f1": 0.9090909090909091,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.5714285714285714,
+      "recall": 0.5714285714285714,
+      "f1": 0.5714285714285714,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9047619047619048,
+      "recall": 1.0,
+      "f1": 0.95,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 0.8333333333333333,
+  "rare_macro_precision": 0.8055555555555555,
+  "ap": {
+    "FTP-BruteForce": 0.9811507936507936,
+    "Web-BruteForce": 0.9499356762000699,
+    "Web-SQLi": 0.5820618458973082,
+    "Web-XSS": 0.9701742025739905
+  },
+  "rare_macro_ap": 0.8708306295805406,
+  "source": "smote",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 3,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 4.826134219998494
+}

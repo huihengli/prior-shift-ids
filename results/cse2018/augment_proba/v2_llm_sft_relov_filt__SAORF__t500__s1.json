@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9050297431125586,
+  "macro_f1": 0.8476818422002123,
+  "weighted_f1": 0.8980444628172446,
+  "rare_macro_f1": 0.7664818571106603,
+  "rare_macro_recall": 0.8359415981815002,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8647646219686163,
+      "recall": 0.9598166666666667,
+      "f1": 0.9098147636162566,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993501949415176,
+      "recall": 0.99965,
+      "f1": 0.9995000749887517,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.9230769230769231,
+      "recall": 1.0,
+      "f1": 0.96,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8184444613396183,
+      "recall": 0.5446771908520542,
+      "f1": 0.6540693258802442,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999849977497,
+      "recall": 0.99975,
+      "f1": 0.9998249868740156,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9523809523809523,
+      "recall": 0.9302325581395349,
+      "f1": 0.9411764705882353,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.18181818181818182,
+      "recall": 0.5714285714285714,
+      "f1": 0.27586206896551724,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9411764705882353,
+      "recall": 0.8421052631578947,
+      "f1": 0.8888888888888888,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.5,
+  "rare_macro_precision": 0.749613131966073,
+  "ap": {
+    "FTP-BruteForce": 0.9935897435897436,
+    "Web-BruteForce": 0.946020255809331,
+    "Web-SQLi": 0.4798471462257564,
+    "Web-XSS": 0.9286758886380037
+  },
+  "rare_macro_ap": 0.8370332585657086,
+  "source": "v2_llm_sft_relov_filt",
+  "detector": "SAORF",
+  "target": 500,
+  "seed": 1,
+  "train_rows": 122660,
+  "n_synth": 1260,
+  "train_time_s": 16.47223594901152
+}

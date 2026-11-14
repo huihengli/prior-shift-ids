@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9050048187165598,
+  "macro_f1": 0.8452677930439269,
+  "weighted_f1": 0.8989169402708012,
+  "rare_macro_f1": 0.7594240848860665,
+  "rare_macro_recall": 0.8490994929183423,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8685959694063372,
+      "recall": 0.95395,
+      "f1": 0.9092743216623245,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.999450247388675,
+      "recall": 0.9999,
+      "f1": 0.9996750731085505,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8021081510360263,
+      "recall": 0.562133171422789,
+      "f1": 0.6610144280827012,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998499699939988,
+      "recall": 0.99965,
+      "f1": 0.9997499749974997,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9302325581395349,
+      "recall": 0.9302325581395349,
+      "f1": 0.9302325581395349,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5714285714285714,
+      "f1": 0.42105263157894735,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.7727272727272727,
+      "recall": 0.8947368421052632,
+      "f1": 0.8292682926829268,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.3333333333333335,
+  "rare_macro_precision": 0.6965732910500353,
+  "ap": {
+    "FTP-BruteForce": 0.883156426906427,
+    "Web-BruteForce": 0.9668183518698438,
+    "Web-SQLi": 0.625080475080475,
+    "Web-XSS": 0.9288483631438846
+  },
+  "rare_macro_ap": 0.8509759042501576,
+  "source": "llm_sft_noneov_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 4,
+  "train_rows": 122646,
+  "n_synth": 1246,
+  "train_time_s": 4.183492412965279
+}

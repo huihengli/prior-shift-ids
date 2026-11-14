@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9035342793526303,
+  "macro_f1": 0.8382674767094813,
+  "weighted_f1": 0.8964033632850421,
+  "rare_macro_f1": 0.7480143055407281,
+  "rare_macro_recall": 0.8224522060966369,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8634145609056649,
+      "recall": 0.9584333333333334,
+      "f1": 0.9084460873754966,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993503573034831,
+      "recall": 0.9999,
+      "f1": 0.9996251030966484,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9922928709055877,
+      "f1": 0.9961315280464217,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.6470588235294118,
+      "recall": 0.9166666666666666,
+      "f1": 0.7586206896551724,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8114211847007832,
+      "recall": 0.5399210686095932,
+      "f1": 0.6483973872094789,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999699909973,
+      "recall": 0.9996,
+      "f1": 0.9997499624943742,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9285714285714286,
+      "recall": 0.9069767441860465,
+      "f1": 0.9176470588235294,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5714285714285714,
+      "f1": 0.42105263157894735,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.8947368421052632,
+      "recall": 0.8947368421052632,
+      "f1": 0.8947368421052632,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.4999999999999998,
+  "rare_macro_precision": 0.7009251068848592,
+  "ap": {
+    "FTP-BruteForce": 0.9206247255160298,
+    "Web-BruteForce": 0.915995040175518,
+    "Web-SQLi": 0.5724037685803472,
+    "Web-XSS": 0.8778835047052419
+  },
+  "rare_macro_ap": 0.8217267597442842,
+  "source": "great",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 2,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 4.80661272094585
+}

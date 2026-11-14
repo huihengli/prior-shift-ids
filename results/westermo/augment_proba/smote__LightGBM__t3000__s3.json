@@ -1,0 +1,48 @@
+{
+  "accuracy": 0.996170079724871,
+  "macro_f1": 0.980908032697777,
+  "weighted_f1": 0.9961777705516359,
+  "rare_macro_f1": 0.9751609653081662,
+  "rare_macro_recall": 0.976907095718421,
+  "per_class": {
+    "Benign": {
+      "precision": 0.9976538530951092,
+      "recall": 0.9986451088429229,
+      "f1": 0.9981492348666094,
+      "support": 11071
+    },
+    "MITM": {
+      "precision": 0.9321266968325792,
+      "recall": 0.9671361502347418,
+      "f1": 0.9493087557603687,
+      "support": 213
+    },
+    "PortScan": {
+      "precision": 0.9926144756277696,
+      "recall": 0.9781659388646288,
+      "f1": 0.9853372434017595,
+      "support": 687
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9963144963144963,
+      "recall": 0.9854191980558931,
+      "f1": 0.9908368967623702,
+      "support": 823
+    }
+  },
+  "fp_benign_per_10k": 13.548911570770482,
+  "rare_macro_precision": 0.9736852229249484,
+  "ap": {
+    "MITM": 0.990331748533646,
+    "PortScan": 0.997149976541658,
+    "SSH-BruteForce": 0.9991299829196554
+  },
+  "rare_macro_ap": 0.9955372359983198,
+  "source": "smote",
+  "detector": "LightGBM",
+  "target": 3000,
+  "seed": 3,
+  "train_rows": 34878,
+  "n_synth": 4926,
+  "train_time_s": 2.521227256999964
+}

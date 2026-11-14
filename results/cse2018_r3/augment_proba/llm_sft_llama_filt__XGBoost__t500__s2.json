@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9043152437605929,
+  "macro_f1": 0.861431577787234,
+  "weighted_f1": 0.8979406308665453,
+  "rare_macro_f1": 0.797027972027972,
+  "rare_macro_recall": 0.8738852946319285,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8669804610052517,
+      "recall": 0.9547333333333333,
+      "f1": 0.9087433471084213,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9996000799840032,
+      "recall": 0.9998,
+      "f1": 0.9997000299970003,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8027200935946183,
+      "recall": 0.5554543614652905,
+      "f1": 0.656578947368421,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9997999799979999,
+      "recall": 0.9997,
+      "f1": 0.9997499874993749,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9333333333333333,
+      "recall": 0.9767441860465116,
+      "f1": 0.9545454545454546,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5714285714285714,
+      "f1": 0.6153846153846154,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.72,
+      "recall": 0.9473684210526315,
+      "f1": 0.8181818181818182,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.1666666666666665,
+  "rare_macro_precision": 0.7466666666666666,
+  "ap": {
+    "FTP-BruteForce": 0.950057295645531,
+    "Web-BruteForce": 0.9787926936561921,
+    "Web-SQLi": 0.570789649910529,
+    "Web-XSS": 0.9021368167978889
+  },
+  "rare_macro_ap": 0.8504441140025353,
+  "source": "llm_sft_llama_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 2,
+  "train_rows": 122722,
+  "n_synth": 1322,
+  "train_time_s": 4.171900462999474
+}

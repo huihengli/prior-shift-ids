@@ -1,0 +1,32 @@
+{
+  "label_strategy": "NST_M_Label",
+  "merge_portscan": false,
+  "raw_rows": 68729,
+  "raw_label_counts": {
+    "Normal": 54028,
+    "BAD-MISCONF-DUPLICATION": 4611,
+    "BAD-MISCONF": 3889,
+    "BAD-SSH": 2968,
+    "BAD-PORTSCAN2": 2179,
+    "BAD-MITM": 708,
+    "BAD-PORTSCAN1": 267,
+    "GOOD-SSH": 79
+  },
+  "removed_misconf_rows": 8500,
+  "after_clean": 60229,
+  "after_dedup": 42830,
+  "conflict_rows_removed": 86,
+  "final_unique_rows": 42744,
+  "dedup_label_counts": {
+    "Benign": 36949,
+    "SSH-BruteForce": 2783,
+    "PortScan-Multi": 2092,
+    "MITM": 689,
+    "PortScan-Single": 231
+  },
+  "rows_in_multi_row_flow_keys": 4069,
+  "flow_key_overlap_train_test": 0,
+  "train_rows": 29962,
+  "test_rows": 12782,
+  "train_test_overlap": 0
+}

@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9042238543085973,
+  "macro_f1": 0.8369128589599714,
+  "weighted_f1": 0.8963502069297573,
+  "rare_macro_f1": 0.7457750582750583,
+  "rare_macro_recall": 0.7928833712187444,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8610167977126519,
+      "recall": 0.96365,
+      "f1": 0.9094469611174028,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004547044421,
+      "recall": 0.99995,
+      "f1": 0.9996251218354035,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9903660886319846,
+      "f1": 0.995159728944821,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8286485628076862,
+      "recall": 0.5280307630034407,
+      "f1": 0.6450336856418815,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.99985,
+      "recall": 0.99985,
+      "f1": 0.99985,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9111111111111111,
+      "recall": 0.9534883720930233,
+      "f1": 0.9318181818181818,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.5,
+      "recall": 0.42857142857142855,
+      "f1": 0.46153846153846156,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.5769230769230769,
+      "recall": 0.7894736842105263,
+      "f1": 0.6666666666666666,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.6666666666666665,
+  "rare_macro_precision": 0.7112942612942612,
+  "ap": {
+    "FTP-BruteForce": 0.9735750360750359,
+    "Web-BruteForce": 0.9633486942107177,
+    "Web-SQLi": 0.4891329359054923,
+    "Web-XSS": 0.9086147829250546
+  },
+  "rare_macro_ap": 0.8336678622790751,
+  "source": "ros",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 3,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 4.790870292985346
+}

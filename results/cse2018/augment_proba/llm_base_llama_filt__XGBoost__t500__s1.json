@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9043900169485892,
+  "macro_f1": 0.8509220796493268,
+  "weighted_f1": 0.8976730425675374,
+  "rare_macro_f1": 0.7738989937265799,
+  "rare_macro_recall": 0.8359415981815002,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8656194410106431,
+      "recall": 0.957,
+      "f1": 0.9090189497680751,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004547044421,
+      "recall": 0.99995,
+      "f1": 0.9996251218354035,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.7058823529411765,
+      "recall": 1.0,
+      "f1": 0.8275862068965517,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8092149407291434,
+      "recall": 0.5491803278688525,
+      "f1": 0.6543087078397685,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999699909973,
+      "recall": 0.9996,
+      "f1": 0.9997499624943742,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.8333333333333334,
+      "recall": 0.9302325581395349,
+      "f1": 0.8791208791208791,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.4444444444444444,
+      "recall": 0.5714285714285714,
+      "f1": 0.5,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9411764705882353,
+      "recall": 0.8421052631578947,
+      "f1": 0.8888888888888888,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.3333333333333335,
+  "rare_macro_precision": 0.7312091503267975,
+  "ap": {
+    "FTP-BruteForce": 0.9935897435897436,
+    "Web-BruteForce": 0.9718200785403581,
+    "Web-SQLi": 0.5013460542149047,
+    "Web-XSS": 0.8949146010180951
+  },
+  "rare_macro_ap": 0.8404176193407753,
+  "source": "llm_base_llama_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 1,
+  "train_rows": 122258,
+  "n_synth": 858,
+  "train_time_s": 4.16258377203485
+}

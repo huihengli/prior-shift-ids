@@ -1,0 +1,88 @@
+{
+  "class": "DDoS-LOIC-UDP",
+  "n": 300,
+  "target": 1000,
+  "detector": "SAORF",
+  "seed": 1,
+  "purity": 1.0,
+  "none": {
+    "f1": 0.9980694980694981,
+    "precision": 1.0,
+    "recall": 0.9961464354527938,
+    "ap": 1.0,
+    "fp_benign_per_10k": 0.0,
+    "matched": {
+      "k_test": 129,
+      "f1": 0.9977597580252919,
+      "f1_sd": 0.0025707317006388873,
+      "precision": 1.0,
+      "recall": 0.9955426356589147,
+      "ap": 1.0,
+      "fp_other": 0
+    }
+  },
+  "ps": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "ap": 1.0,
+    "fp_benign_per_10k": 0.0,
+    "matched": {
+      "k_test": 129,
+      "f1": 1.0,
+      "f1_sd": 0.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "ap": 1.0,
+      "fp_other": 0
+    }
+  },
+  "cw": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "ap": 1.0,
+    "fp_benign_per_10k": 0.0,
+    "matched": {
+      "k_test": 129,
+      "f1": 1.0,
+      "f1_sd": 0.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "ap": 1.0,
+      "fp_other": 0
+    }
+  },
+  "ros": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "ap": 1.0,
+    "fp_benign_per_10k": 0.0,
+    "matched": {
+      "k_test": 129,
+      "f1": 1.0,
+      "f1_sd": 0.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "ap": 1.0,
+      "fp_other": 0
+    }
+  },
+  "smote": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "ap": 1.0,
+    "fp_benign_per_10k": 0.0,
+    "matched": {
+      "k_test": 129,
+      "f1": 1.0,
+      "f1_sd": 0.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "ap": 1.0,
+      "fp_other": 0
+    }
+  }
+}

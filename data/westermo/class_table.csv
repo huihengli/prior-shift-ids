@@ -1,0 +1,5 @@
+,unique,train,test,rare
+Benign,36949,25878,11071,False
+SSH-BruteForce,2783,1960,823,True
+PortScan,2325,1638,687,True
+MITM,689,476,213,True

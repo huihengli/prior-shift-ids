@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9043983250805889,
+  "macro_f1": 0.8571667694447737,
+  "weighted_f1": 0.8976991525801747,
+  "rare_macro_f1": 0.7879493024071338,
+  "rare_macro_recall": 0.8359415981815002,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8656504892426915,
+      "recall": 0.9569333333333333,
+      "f1": 0.9090059923848425,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004896572399,
+      "recall": 1.0,
+      "f1": 0.99965012245714,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8087753277711561,
+      "recall": 0.5493321190042502,
+      "f1": 0.6542726286609618,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999749937484,
+      "recall": 0.99965,
+      "f1": 0.9997749718714839,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 1.0,
+      "recall": 0.9302325581395349,
+      "f1": 0.963855421686747,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.3076923076923077,
+      "recall": 0.5714285714285714,
+      "f1": 0.4,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.8888888888888888,
+      "recall": 0.8421052631578947,
+      "f1": 0.8648648648648649,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.4999999999999998,
+  "rare_macro_precision": 0.7634310134310135,
+  "ap": {
+    "FTP-BruteForce": 0.9811507936507936,
+    "Web-BruteForce": 0.9772601795473568,
+    "Web-SQLi": 0.559498707543976,
+    "Web-XSS": 0.8663172572944098
+  },
+  "rare_macro_ap": 0.846056734509134,
+  "source": "llm_sft_llama_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 6,
+  "train_rows": 122720,
+  "n_synth": 1320,
+  "train_time_s": 4.084265096054878
+}

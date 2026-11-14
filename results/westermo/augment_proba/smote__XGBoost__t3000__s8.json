@@ -1,0 +1,48 @@
+{
+  "accuracy": 0.9960137564483351,
+  "macro_f1": 0.9797747795953875,
+  "weighted_f1": 0.99601797517725,
+  "rare_macro_f1": 0.9736498497988597,
+  "rare_macro_recall": 0.9739667254981513,
+  "per_class": {
+    "Benign": {
+      "precision": 0.9974742918996933,
+      "recall": 0.9988257609971999,
+      "f1": 0.9981495689849709,
+      "support": 11071
+    },
+    "MITM": {
+      "precision": 0.9318181818181818,
+      "recall": 0.9624413145539906,
+      "f1": 0.9468822170900693,
+      "support": 213
+    },
+    "PortScan": {
+      "precision": 0.9925925925925926,
+      "recall": 0.975254730713246,
+      "f1": 0.9838472834067548,
+      "support": 687
+    },
+    "SSH-BruteForce": {
+      "precision": 0.996309963099631,
+      "recall": 0.9842041312272175,
+      "f1": 0.9902200488997555,
+      "support": 823
+    }
+  },
+  "fp_benign_per_10k": 11.742390028001083,
+  "rare_macro_precision": 0.9735735791701351,
+  "ap": {
+    "MITM": 0.9910388829298858,
+    "PortScan": 0.9977165621231198,
+    "SSH-BruteForce": 0.9993302005270241
+  },
+  "rare_macro_ap": 0.9960285485266765,
+  "source": "smote",
+  "detector": "XGBoost",
+  "target": 3000,
+  "seed": 8,
+  "train_rows": 34878,
+  "n_synth": 4926,
+  "train_time_s": 1.9160494129998824
+}

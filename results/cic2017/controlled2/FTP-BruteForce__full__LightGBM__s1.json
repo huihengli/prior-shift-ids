@@ -1,0 +1,22 @@
+{
+  "class": "FTP-BruteForce",
+  "n": 2981,
+  "detector": "LightGBM",
+  "seed": 1,
+  "none": {
+    "f1": 0.9996083039561301,
+    "precision": 1.0,
+    "recall": 0.9992169146436961,
+    "ap": 0.9994863111954203,
+    "fp_benign_per_10k": 0.0,
+    "matched": {
+      "k_test": 1277,
+      "f1": 0.9996083039561301,
+      "f1_sd": 0.0,
+      "precision": 1.0,
+      "recall": 0.9992169146436961,
+      "ap": 0.9994863111954203,
+      "fp_other": 0
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9042820112325944,
+  "macro_f1": 0.8117659861763161,
+  "weighted_f1": 0.8973596450358363,
+  "rare_macro_f1": 0.6862763673108501,
+  "rare_macro_recall": 0.8191991606924287,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8646945589075706,
+      "recall": 0.9582833333333334,
+      "f1": 0.9090865969927427,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004896572399,
+      "recall": 1.0,
+      "f1": 0.99965012245714,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.7058823529411765,
+      "recall": 1.0,
+      "f1": 0.8275862068965517,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8132698556638707,
+      "recall": 0.5445253997166566,
+      "f1": 0.6523017243991878,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999699909973,
+      "recall": 0.9996,
+      "f1": 0.9997499624943742,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.8541666666666666,
+      "recall": 0.9534883720930233,
+      "f1": 0.9010989010989011,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.13636363636363635,
+      "recall": 0.42857142857142855,
+      "f1": 0.20689655172413793,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.7391304347826086,
+      "recall": 0.8947368421052632,
+      "f1": 0.8095238095238095,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 4.166666666666667,
+  "rare_macro_precision": 0.608885772688522,
+  "ap": {
+    "FTP-BruteForce": 1.0,
+    "Web-BruteForce": 0.9515651622406625,
+    "Web-SQLi": 0.12340965513982269,
+    "Web-XSS": 0.9437628486289141
+  },
+  "rare_macro_ap": 0.7546844165023499,
+  "source": "ctgan",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 9,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 5.149993797997013
+}

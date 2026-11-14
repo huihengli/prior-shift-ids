@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9044066332125885,
+  "macro_f1": 0.7877013815900863,
+  "weighted_f1": 0.8976625658026555,
+  "rare_macro_f1": 0.6316715199693923,
+  "rare_macro_recall": 0.8323570554292707,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8654495059050373,
+      "recall": 0.9575333333333333,
+      "f1": 0.9091657171793898,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994502748625688,
+      "recall": 0.99995,
+      "f1": 0.9997000749812547,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.4444444444444444,
+      "recall": 1.0,
+      "f1": 0.6153846153846154,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8119138720084027,
+      "recall": 0.5475612224246104,
+      "f1": 0.65403559665186,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998499624906226,
+      "recall": 0.9996,
+      "f1": 0.9997249656207026,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.803921568627451,
+      "recall": 0.9534883720930233,
+      "f1": 0.8723404255319149,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.11538461538461539,
+      "recall": 0.42857142857142855,
+      "f1": 0.18181818181818182,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.782608695652174,
+      "recall": 0.9473684210526315,
+      "f1": 0.8571428571428571,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 5.5,
+  "rare_macro_precision": 0.5365898310271712,
+  "ap": {
+    "FTP-BruteForce": 0.9518259518259518,
+    "Web-BruteForce": 0.9556822675273339,
+    "Web-SQLi": 0.344974568733936,
+    "Web-XSS": 0.9617263369585349
+  },
+  "rare_macro_ap": 0.8035522812614392,
+  "source": "tvae",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 2,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 5.235090224945452
+}

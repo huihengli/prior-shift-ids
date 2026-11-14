@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9044481738725865,
+  "macro_f1": 0.8544677063812444,
+  "weighted_f1": 0.8966116319462418,
+  "rare_macro_f1": 0.7850116125978194,
+  "rare_macro_recall": 0.8490994929183423,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8612277723170405,
+      "recall": 0.9638,
+      "f1": 0.9096314473125383,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993003847883664,
+      "recall": 0.99985,
+      "f1": 0.9995751168428683,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9903660886319846,
+      "f1": 0.995159728944821,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8294192319898445,
+      "recall": 0.5289415098158268,
+      "f1": 0.6459466139396935,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.99985,
+      "recall": 0.99985,
+      "f1": 0.99985,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9090909090909091,
+      "recall": 0.9302325581395349,
+      "f1": 0.9195402298850575,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.36363636363636365,
+      "recall": 0.5714285714285714,
+      "f1": 0.4444444444444444,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9444444444444444,
+      "recall": 0.8947368421052632,
+      "f1": 0.918918918918919,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.4999999999999998,
+  "rare_macro_precision": 0.7417929292929293,
+  "ap": {
+    "FTP-BruteForce": 0.9735750360750361,
+    "Web-BruteForce": 0.9486237721006867,
+    "Web-SQLi": 0.3997465112892113,
+    "Web-XSS": 0.9027938641278255
+  },
+  "rare_macro_ap": 0.8061847958981898,
+  "source": "cw",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 1,
+  "train_rows": 121400,
+  "n_synth": 0,
+  "train_time_s": 4.437291349982843
+}

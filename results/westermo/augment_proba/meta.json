@@ -1,0 +1,13 @@
+{
+  "labels": [
+    "Benign",
+    "MITM",
+    "PortScan",
+    "SSH-BruteForce"
+  ],
+  "rare": [
+    "MITM",
+    "PortScan",
+    "SSH-BruteForce"
+  ]
+}

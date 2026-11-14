@@ -1,0 +1,22 @@
+# 实验机 GPU 环境：原生 Python 3.9（已按 3.9.25 校验）+ venv，CUDA 驱动 ≥ 535，2 × A10 24GB
+# 安装：
+#   python3 -m venv ~/venvs/idsllm && source ~/venvs/idsllm/bin/activate
+#   pip install -U pip
+#   pip install -r gpu/requirements-gpu.txt
+#   （国内源：pip install -r gpu/requirements-gpu.txt -i https://pypi.tuna.tsinghua.edu.cn/simple）
+# 以下版本均提供 Python 3.9 的预编译包
+torch==2.5.1
+transformers==4.46.3
+peft==0.13.2
+trl==0.12.2
+accelerate==1.1.1
+datasets==3.1.0
+bitsandbytes==0.44.1
+vllm==0.6.4.post1        # 可选但强烈建议（双卡张量并行，生成快约 10 倍）；装不上会自动回退到 transformers
+numpy<2.0                # vllm 0.6.4 要求 numpy 1.x
+pandas<2.3
+scipy<1.14
+scikit-learn<1.7
+pyyaml
+sentencepiece
+# GReaT 基线若与上面版本冲突，请单独建一个 venv 安装：pip install be-great

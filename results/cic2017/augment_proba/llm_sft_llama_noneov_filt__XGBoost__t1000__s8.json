@@ -1,0 +1,116 @@
+{
+  "accuracy": 0.9905680053764687,
+  "macro_f1": 0.8461072105944597,
+  "weighted_f1": 0.9919425377449468,
+  "rare_macro_f1": 0.5831755527797865,
+  "rare_macro_recall": 0.6646612030869464,
+  "per_class": {
+    "Benign": {
+      "precision": 0.9977588298732812,
+      "recall": 0.98685,
+      "f1": 0.9922744335701836,
+      "support": 60000
+    },
+    "Bot": {
+      "precision": 0.7611026033690659,
+      "recall": 0.8843416370106761,
+      "f1": 0.8181069958847736,
+      "support": 562
+    },
+    "DDoS": {
+      "precision": 0.9993499349934993,
+      "recall": 0.99925,
+      "f1": 0.9992999649982499,
+      "support": 20000
+    },
+    "DoS GoldenEye": {
+      "precision": 0.9786010859150431,
+      "recall": 0.9960988296488946,
+      "f1": 0.9872724343483165,
+      "support": 3076
+    },
+    "DoS Hulk": {
+      "precision": 0.9986490543380366,
+      "recall": 0.99795,
+      "f1": 0.9982994047916771,
+      "support": 20000
+    },
+    "DoS Slowhttptest": {
+      "precision": 0.9884393063583815,
+      "recall": 0.9935442220787605,
+      "f1": 0.9909851899549259,
+      "support": 1549
+    },
+    "DoS slowloris": {
+      "precision": 0.9938186813186813,
+      "recall": 0.9931365820178449,
+      "f1": 0.99347751458977,
+      "support": 1457
+    },
+    "FTP-BruteForce": {
+      "precision": 1.0,
+      "recall": 0.9992169146436961,
+      "f1": 0.9996083039561301,
+      "support": 1277
+    },
+    "Heartbleed": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1": 0.6666666666666666,
+      "support": 3
+    },
+    "Infiltration": {
+      "precision": 1.0,
+      "recall": 0.9090909090909091,
+      "f1": 0.9523809523809523,
+      "support": 11
+    },
+    "PortScan": {
+      "precision": 0.9991000449977501,
+      "recall": 0.99915,
+      "f1": 0.9991250218744532,
+      "support": 20000
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9967391304347826,
+      "recall": 0.9978237214363439,
+      "f1": 0.9972811310494835,
+      "support": 919
+    },
+    "Web-BruteForce": {
+      "precision": 0.4510250569476082,
+      "recall": 0.4841075794621027,
+      "f1": 0.4669811320754717,
+      "support": 409
+    },
+    "Web-SQLi": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "support": 4
+    },
+    "Web-XSS": {
+      "precision": 0.21037037037037037,
+      "recall": 0.7634408602150538,
+      "f1": 0.32984901277584205,
+      "support": 186
+    }
+  },
+  "fp_benign_per_10k": 86.5,
+  "rare_macro_precision": 0.5656124187969291,
+  "ap": {
+    "Heartbleed": 0.7666666666666666,
+    "Infiltration": 0.9757575757575758,
+    "Web-BruteForce": 0.5089805976671793,
+    "Web-SQLi": 0.5235558408215661,
+    "Web-XSS": 0.22733394738576743
+  },
+  "rare_macro_ap": 0.600458925659751,
+  "source": "llm_sft_llama_noneov_filt",
+  "detector": "XGBoost",
+  "target": 1000,
+  "seed": 8,
+  "train_rows": 144668,
+  "n_synth": 2610,
+  "train_time_s": 8.328790563973598
+}

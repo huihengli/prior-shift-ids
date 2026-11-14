@@ -1,0 +1,47 @@
+% Fig. 6 受控实验：样本充足的攻击类下采样为稀有类（18 类  $\times$  n∈{10,30,100,300}  $\times$  2 检测器  $\times$  5 种子）
+% (a) 测试先验与训练一致时的 ΔF1；(b) 测试先验不一致（测试集保持原样）时的 ΔF1；(c) 先验一致时的 ΔPR-AUC
+% 误差棒：95% 置信区间（单位 = 类  $\times$  n  $\times$  检测器）；全额先验平移不改变分数，ΔPR-AUC 恒为 0（(c) 不画）
+% 数据：data/fig6_{matched,unmatched}.dat（由 prep_figs.py 生成）；编译：pdflatex fig6_controlled.tex
+\documentclass[10pt]{standalone}
+\input{fig_style}
+\begin{document}
+\definecolor{cRED}{HTML}{E34948}
+\begin{tikzpicture}
+\pgfplotsset{
+  f6/.style={paper, ybar, /pgf/bar width=5.0pt, scaled y ticks=false,
+    xtick={0,1,2}, xticklabels={Low, Medium, High}, xmin=-0.55, xmax=2.55,
+    yticklabel style={/pgf/number format/fixed, /pgf/number format/fixed zerofill, /pgf/number format/precision=2, /pgf/number format/showpos},
+    extra y ticks={0}, extra y tick labels={},
+    extra y tick style={grid=major, major grid style={cTEXT!70, line width=0.6pt}}},
+  bPS/.style={fill=cRED, draw=white, line width=0.3pt, bar shift=-8.25pt},
+  bCW/.style={fill=cCW, draw=white, line width=0.3pt, bar shift=-2.75pt},
+  bROS/.style={fill=cROS, draw=white, line width=0.3pt, bar shift=2.75pt},
+  bSMOTE/.style={fill=cSMOTE, draw=white, line width=0.3pt, bar shift=8.25pt},
+}
+\begin{groupplot}[
+  group style={group size=3 by 1, horizontal sep=0.5cm},
+  width=5.6cm, height=4.8cm,
+]
+\nextgroupplot[f6, title={(a) Matched test prior}, ymin=-0.24, ymax=0.19, ytick={-0.20,-0.15,...,0.15},
+  ylabel={$\Delta$F1 vs.\ no augmentation}, ylabel style={yshift=-3pt},
+  legend to name=fig6legend, legend columns=4,
+  legend image code/.code={\draw[#1, draw=none] (0cm,-0.08cm) rectangle (0.24cm,0.12cm);}]
+  \addplot[bPS, errbar] table[x=x, y=df1_ps, y error=df1ci_ps]{data/fig6_matched.dat};
+  \addplot[bCW, errbar] table[x=x, y=df1_cw, y error=df1ci_cw]{data/fig6_matched.dat};
+  \addplot[bROS, errbar] table[x=x, y=df1_ros, y error=df1ci_ros]{data/fig6_matched.dat};
+  \addplot[bSMOTE, errbar] table[x=x, y=df1_smote, y error=df1ci_smote]{data/fig6_matched.dat};
+  \legend{Full prior shift (no retraining), Class weight, ROS, SMOTE}
+\nextgroupplot[f6, title={(b) Mismatched test prior}, xlabel={Class purity (10-NN) after downsampling}, ymin=-0.24, ymax=0.19, ytick={-0.20,-0.15,...,0.15}, yticklabels={}]
+  \addplot[bPS, errbar] table[x=x, y=df1_ps, y error=df1ci_ps]{data/fig6_unmatched.dat};
+  \addplot[bCW, errbar] table[x=x, y=df1_cw, y error=df1ci_cw]{data/fig6_unmatched.dat};
+  \addplot[bROS, errbar] table[x=x, y=df1_ros, y error=df1ci_ros]{data/fig6_unmatched.dat};
+  \addplot[bSMOTE, errbar] table[x=x, y=df1_smote, y error=df1ci_smote]{data/fig6_unmatched.dat};
+\nextgroupplot[f6, title={(c) Matched prior: $\Delta$PR-AUC}, ymin=-0.035, ymax=0.035, ytick={-0.03,-0.02,...,0.03},
+  yticklabel pos=right, ylabel={$\Delta$PR-AUC}, ylabel near ticks]
+  \addplot[bCW, errbar] table[x=x, y=dap_cw, y error=dapci_cw]{data/fig6_matched.dat};
+  \addplot[bROS, errbar] table[x=x, y=dap_ros, y error=dapci_ros]{data/fig6_matched.dat};
+  \addplot[bSMOTE, errbar] table[x=x, y=dap_smote, y error=dapci_smote]{data/fig6_matched.dat};
+\end{groupplot}
+\node[anchor=south] at ($(group c2r1.north)+(0,0.42cm)$) {\pgfplotslegendfromname{fig6legend}};
+\end{tikzpicture}
+\end{document}

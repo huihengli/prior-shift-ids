@@ -1,0 +1,26 @@
+{
+  "labels": [
+    "Benign",
+    "Bot",
+    "DDoS",
+    "DoS GoldenEye",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-BruteForce",
+    "Heartbleed",
+    "Infiltration",
+    "PortScan",
+    "SSH-BruteForce",
+    "Web-BruteForce",
+    "Web-SQLi",
+    "Web-XSS"
+  ],
+  "rare": [
+    "Heartbleed",
+    "Infiltration",
+    "Web-BruteForce",
+    "Web-SQLi",
+    "Web-XSS"
+  ]
+}

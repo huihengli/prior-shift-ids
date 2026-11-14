@@ -1,0 +1,11 @@
+,raw,unique,train,test,rare
+Benign,2237731,925619,60000,60000,False
+Exploits,42748,35443,20000,10633,False
+Fuzzers,33816,20742,14519,6223,False
+Reconnaissance,17074,7050,4935,2115,False
+Generic,19651,4830,3381,1449,False
+DoS,5980,4668,3268,1400,False
+Backdoor,4659,3149,2204,945,True
+Shellcode,2381,1975,1383,592,True
+Analysis,1226,1224,857,367,True
+Worms,158,141,99,42,True

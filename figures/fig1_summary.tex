@@ -1,0 +1,45 @@
+% Fig. 1 总结图：重复划分（r1–r3）上各增强来源相对“不增强”的稀有类 macro-F1 差
+% 数据：data/fig1_<数据集>.dat（由 prep_figs.py 生成）；编译：pdflatex fig1_summary.tex
+\documentclass[10pt]{standalone}
+\input{fig_style}
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[
+  paper,
+  group style={group size=3 by 1, horizontal sep=0.9cm, y descriptions at=edge left},
+  width=5.95cm, height=4.6cm,
+  ybar, /pgf/bar width=4.1pt,
+  ymin=-0.11, ymax=0.12, ytick={-0.10,-0.05,0,0.05,0.10},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/fixed zerofill, /pgf/number format/precision=2, /pgf/number format/showpos},
+  xtick=data, xticklabels={SAORF, RF-grid, LGBM, XGB},
+  xticklabel style={font=\scriptsize},
+  enlarge x limits=0.16,
+  extra y ticks={0}, extra y tick labels={},
+  extra y tick style={grid=major, major grid style={cTEXT!70, line width=0.6pt}},
+  ylabel={$\Delta$F1 vs.\ no augmentation}, ylabel style={yshift=-3pt},
+]
+\nextgroupplot[title={CSE-CIC-IDS2018},
+  legend to name=fig1legend, legend columns=5,
+  legend image code/.code={\draw[#1, draw=none] (0cm,-0.08cm) rectangle (0.24cm,0.12cm);}]
+  \addplot[fill=cCW, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_cw, y error=sd_cw]{data/fig1_cse2018.dat};
+  \addplot[fill=cROS, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_ros, y error=sd_ros]{data/fig1_cse2018.dat};
+  \addplot[fill=cSMOTE, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_smote, y error=sd_smote]{data/fig1_cse2018.dat};
+  \addplot[fill=cQWEN, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_qwen, y error=sd_qwen]{data/fig1_cse2018.dat};
+  \addplot[fill=cLLAMA, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_llama, y error=sd_llama]{data/fig1_cse2018.dat};
+  \legend{Class weight, ROS, SMOTE, LLM (Qwen2.5-7B), LLM (Llama-3.1-8B)}
+\nextgroupplot[title={NF-UNSW-NB15-v3}]
+  \addplot[fill=cCW, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_cw, y error=sd_cw]{data/fig1_nf_unsw_v3.dat};
+  \addplot[fill=cROS, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_ros, y error=sd_ros]{data/fig1_nf_unsw_v3.dat};
+  \addplot[fill=cSMOTE, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_smote, y error=sd_smote]{data/fig1_nf_unsw_v3.dat};
+  \addplot[fill=cQWEN, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_qwen, y error=sd_qwen]{data/fig1_nf_unsw_v3.dat};
+  \addplot[fill=cLLAMA, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_llama, y error=sd_llama]{data/fig1_nf_unsw_v3.dat};
+\nextgroupplot[title={CIC-IDS2017}]
+  \addplot[fill=cCW, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_cw, y error=sd_cw]{data/fig1_cic2017.dat};
+  \addplot[fill=cROS, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_ros, y error=sd_ros]{data/fig1_cic2017.dat};
+  \addplot[fill=cSMOTE, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_smote, y error=sd_smote]{data/fig1_cic2017.dat};
+  \addplot[fill=cQWEN, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_qwen, y error=sd_qwen]{data/fig1_cic2017.dat};
+  \addplot[fill=cLLAMA, draw=white, line width=0.3pt, errbar] table[x=x, y=delta_llama, y error=sd_llama]{data/fig1_cic2017.dat};
+\end{groupplot}
+\node[anchor=south] at ($(group c2r1.north)+(0,0.42cm)$) {\pgfplotslegendfromname{fig1legend}};
+\end{tikzpicture}
+\end{document}

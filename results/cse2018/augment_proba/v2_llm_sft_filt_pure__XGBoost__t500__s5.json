@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9048303479445682,
+  "macro_f1": 0.8811097568060303,
+  "weighted_f1": 0.8979980445997722,
+  "rare_macro_f1": 0.8416178416178416,
+  "rare_macro_recall": 0.8490994929183423,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8654364284961693,
+      "recall": 0.9582833333333334,
+      "f1": 0.9094964290516225,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004896572399,
+      "recall": 1.0,
+      "f1": 0.99965012245714,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8130820066085912,
+      "recall": 0.5478142076502732,
+      "f1": 0.6545949214026602,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999749937484,
+      "recall": 0.99965,
+      "f1": 0.9997749718714839,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.8888888888888888,
+      "recall": 0.9302325581395349,
+      "f1": 0.9090909090909091,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5714285714285714,
+      "f1": 0.6153846153846154,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9444444444444444,
+      "recall": 0.8947368421052632,
+      "f1": 0.918918918918919,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.0,
+  "rare_macro_precision": 0.8392857142857142,
+  "ap": {
+    "FTP-BruteForce": 0.9811507936507937,
+    "Web-BruteForce": 0.9769712098713467,
+    "Web-SQLi": 0.5825244711013212,
+    "Web-XSS": 0.8701914498028954
+  },
+  "rare_macro_ap": 0.8527094811065893,
+  "source": "v2_llm_sft_filt_pure",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 5,
+  "train_rows": 122683,
+  "n_synth": 1283,
+  "train_time_s": 4.104420257965103
+}

@@ -1,0 +1,9 @@
+dataset,space,n_features,class,n_train,purity_mean,purity_median,frac_below_0.5,top_other_neighbours
+cse2018,d10,10,FTP-BruteForce,29,0.8655172413793104,1.0,0.0,Infiltration 0.06; SSH-BruteForce 0.04
+cse2018,d10,10,Web-BruteForce,101,0.9128712871287129,1.0,0.0891089108910891,Benign 0.07; Infiltration 0.01
+cse2018,d10,10,Web-SQLi,16,0.31875,0.2,0.5625,Web-BruteForce 0.32; Benign 0.29
+cse2018,d10,10,Web-XSS,43,0.8209302325581395,1.0,0.09302325581395349,Benign 0.07; Infiltration 0.07
+cse2018,full,73,FTP-BruteForce,29,1.0,1.0,0.0,
+cse2018,full,73,Web-BruteForce,101,0.9356435643564357,1.0,0.0594059405940594,Infiltration 0.03; Benign 0.02
+cse2018,full,73,Web-SQLi,16,0.23125,0.2,0.6875,Web-BruteForce 0.57; Infiltration 0.07
+cse2018,full,73,Web-XSS,43,0.944186046511628,1.0,0.046511627906976744,Web-BruteForce 0.02; Benign 0.02

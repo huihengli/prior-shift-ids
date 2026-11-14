@@ -1,0 +1,25 @@
+# raw data, generated data and models (not redistributed)
+data/raw/
+data/*/train*.csv.gz
+data/*/test*.csv.gz
+data/*/synth/
+data/*/llm/
+data/*/fullfeat/
+data/*_r[0-9]/
+models/
+# large or intermediate results
+results/*/augment/
+results/*/dup_artefact/raw_counts.npz
+results/cse2018_quick/
+# logs and job outputs
+logs/
+*.log
+joboutput_*
+*.tgz
+# Python / LaTeX
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+figures/*.aux
+figures/*.log
+figures/*.pdf

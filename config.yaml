@@ -1,0 +1,137 @@
+# ============================================================
+# v2 实验统一配置（CPU 与 GPU 脚本共用）
+# 路径均相对于 v2/ 目录
+# ============================================================
+
+dataset: cse2018            # 当前数据集：cse2018 | nf_unsw_v3 | nf_unsw_v2 | cic2017（也可用环境变量 IDS_DATASET 覆盖）
+
+datasets:
+  cse2018:
+    raw_files:              # CSE-CIC-IDS2018 的四个采集日（CICFlowMeter CSV，见 data/README.md）
+      - data/raw/cse2018/Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv
+      - data/raw/cse2018/Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv
+      - data/raw/cse2018/Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv
+      - data/raw/cse2018/Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv
+  cic2017:
+    raw_dir: data/raw/cic2017            # UNB GeneratedLabelledFlows CSV（带 Protocol 列，读取时自动选列）
+                                        # 也可直接指向 ../dataset/CIC-IDS2017（读取时会自动选列）；不能用 MachineLearningCVE（无 Protocol）
+    # 稀有类（训练集 < 1000，与 CSE 同阈值）：Web-BruteForce 954 / Web-XSS 435 / Infiltration 25 / Web-SQLi 11 / Heartbleed 8
+    aug_target_per_rare_class: 1000     # 补足到稀有阈值（Web-BF 已有 954，只补少量）
+    aug_target_sweep: [250, 500, 1000, 2000]
+    gen_n_per_class: 3000
+  nf_unsw_v3:                          # 第二数据集（已下载，NetFlow v3，UQ 2025 版）
+    raw_dir: data/raw/nf_unsw_v3
+    pattern: NF-UNSW-NB15-v3.csv
+    rare_threshold: 2500                # 稀有类 = Analysis / Worms / Shellcode / Backdoor（与 CSE 同为 4 个）
+    aug_target_per_rare_class: 3000     # 稀有类真实样本已有 99~2204 条，补足到 3000
+    aug_target_sweep: [2500, 3000, 3500, 4000]
+    gen_n_per_class: 6000               # LLM 每轮每个稀有类生成的候选数（筛选后需够 ~2900 条）
+  nf_unsw_v2:                          # 旧版本（备用）（NetFlow v2 标准特征，与 7 个原始特征一一对应）
+    raw_dir: data/raw/nf_unsw_v2 # 放 NF-UNSW-NB15-v2.csv（https://staff.itee.uq.edu.au/marius/NIDS_datasets/）
+
+  westermo:                            # 附录外部验证（只跑 CPU）：Westermo 工业网络流量（cpu/00b_prepare_westermo.py）
+    raw_dir: data/raw/westermo/data/extended/flows
+    label_col: NST_M_Label
+    merge_portscan: true                # PORTSCAN1/2 合并为 PortScan（主口径）
+    rare_threshold: 2500                # 与 NF 相同
+    aug_target_per_rare_class: 3000
+    aug_target_sweep: [2500, 3000, 3500, 4000]
+  westermo_ps:                         # 同上，但 PORTSCAN1/2 不合并（标签定义造成重叠的压力测试）
+    raw_dir: data/raw/westermo/data/extended/flows
+    label_col: NST_M_Label
+    merge_portscan: false
+    rare_threshold: 2500
+    aug_target_per_rare_class: 3000
+    aug_target_sweep: [2500, 3000, 3500, 4000]
+# 统一的 10 维紧凑特征（所有组、所有方法都只用这一套，保证可比）
+# 选择理由：LLM 能可靠生成、且彼此之间存在可校验的物理约束
+features:
+  - dst_port
+  - protocol
+  - flow_duration      # 微秒
+  - fwd_pkts
+  - bwd_pkts
+  - fwd_bytes
+  - bwd_bytes
+  - flow_bytes_s
+  - flow_pkts_s
+  - pkt_size_avg
+
+split:
+  test_size: 0.3
+  seed: 2026
+  # 每类上限（只为控制计算量；稀有类全部保留）
+  cap_train_per_class: 20000
+  cap_test_per_class: 20000
+  cap_train_benign: 60000
+  cap_test_benign: 60000
+  rare_threshold: 1000       # 训练集中样本数 < 该值的类视为“稀有类”，是数据增强的对象
+
+experiment:
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]   # 10 个随机种子
+  aug_target_per_rare_class: 500           # 主实验：每个稀有类（真实+合成）补足到的样本数
+  aug_target_sweep: [100, 250, 500, 1000]  # 增强规模消融
+  tune_seeds: [0, 1, 2]                    # 调参方法对比用 3 个种子（调参较耗时）
+  # 主比较族（方案一，按方法设计事先固定，不按结果挑选）：只在族内做 Holm 校正，其余来源只报告未校正 p
+  # none / 代价敏感（cw，11-10 加入的标准基线）/ 传统过采样 / SFT / SFT+重叠过滤 / 完整方法（闭环末轮 + 重叠过滤）
+  stats_family: [none, cw, ros, smote, llm_sft_filt, llm_sft_filt_pure, llm_loop_r3_filt_pure, llm_loop_r3_filt]
+  n_jobs: -1
+
+detector:
+  # SAORF 搜索空间与退火参数
+  sa:
+    T0: 1.0
+    alpha: 0.9
+    maxiter: 40
+    cv_folds: 3
+    scoring: f1_macro
+    tune_subsample: 30000     # 调参时使用的训练子样本（控制耗时）
+  space:
+    n_estimators: [50, 400]
+    max_depth: [5, 40]
+    min_samples_split: [2, 20]
+    min_samples_leaf: [1, 10]
+    max_features: [0.2, 1.0]
+
+llm:   # GPU 部分使用
+  base_model: Qwen/Qwen2.5-7B-Instruct      # 实验机上可改为本地路径
+  max_new_tokens: 256
+  shots: 3                                  # 每个 prompt 给几条同类真实样本
+  prompt_mode: anchor                       # v2：锚点式提示（示例=一条真实锚点+其同类近邻，锚点轮流覆盖每条真实样本）；random=v1 随机抽示例
+  sft:
+    epochs: 1                 # v2：防止背诵（v1 为 3 epoch，SFT 后 92% 生成近乎照抄训练样本）
+    lr: 1.0e-4
+    rare_target_repeats: 2    # 稀有类每条真实样本最多作为监督目标 2 次（v1 为 20 次）
+    common_examples_per_class: 300
+    batch_size: 2             # 单步 2 条 × 累积 8 = 等效 16（双 A10 留足显存余量）
+    grad_accum: 8
+    lora_r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    max_examples_per_class: 1500
+  gen:
+    n_per_class: 3000          # 每轮每个稀有类生成的候选数（筛选前）
+    temperature: 0.9
+    top_p: 0.95
+    batch_size: 32
+  loop:
+    rounds: 3                  # 闭环轮数
+    dpo_pairs_per_class: 600
+    dpo_beta: 0.1
+    dpo_lr: 2.0e-5             # v1 5e-6 学不动（loss≈0.693）；v2 5e-5 第 2 轮起塌缩（解析率 100%→12%）；取 2e-5
+    dpo_rpo_alpha: 1.0         # RPO：DPO + chosen 的 NLL，保持输出格式
+    min_parse_rate: 0.9        # 某轮生成解析率低于此值即停止闭环（run_gpu.sh 检查）
+    dpo_epochs: 1
+  reward:                      # 奖励 = w_valid*R_valid + w_fid*R_fid + w_hard*R_hard - w_mem*P_mem
+    w_valid: 0.3
+    w_fid: 0.3
+    w_hard: 0.4
+    w_mem: 0.5
+    knn_k: 5
+    mem_threshold_quantile: 0.01   # 与训练集最近距离低于真实样本间距离 1% 分位 => 视为“抄袭”
+    accept_threshold: 0.5          # 进入增强集的最低奖励
+    anchor_balance: true           # v2：每条候选归到最近真实锚点，每个锚点最多接受 ceil((最大目标数-真实数)/真实数) 条
+    overlap_filter: true           # v2.1：kNN 同类纯度 < overlap_tau 的样本视为越界，不接受（见 cpu/08_overlap_filter.py）
+    overlap_k: 10
+    overlap_tau: 0.5
+    hard_gate: true                # 越界样本 R_hard=0，避免“困难样本奖励”鼓励越界

@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9051709813565518,
+  "macro_f1": 0.8523066215486663,
+  "weighted_f1": 0.8977035481892236,
+  "rare_macro_f1": 0.7775449181021936,
+  "rare_macro_recall": 0.7944133589788424,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8630949712321602,
+      "recall": 0.9625666666666667,
+      "f1": 0.9101209470905725,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.999450247388675,
+      "recall": 0.9999,
+      "f1": 0.9996750731085505,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8888888888888888,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8265035836709255,
+      "recall": 0.5367840518113742,
+      "f1": 0.6508588957055215,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998500224966255,
+      "recall": 1.0,
+      "f1": 0.9999250056245782,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9285714285714286,
+      "recall": 0.9069767441860465,
+      "f1": 0.9176470588235294,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.5,
+      "recall": 0.42857142857142855,
+      "f1": 0.46153846153846156,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.8421052631578947,
+      "recall": 0.8421052631578947,
+      "f1": 0.8421052631578947,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.1666666666666667,
+  "rare_macro_precision": 0.7676691729323308,
+  "ap": {
+    "FTP-BruteForce": 0.9658730158730161,
+    "Web-BruteForce": 0.9207746620147809,
+    "Web-SQLi": 0.4795595757682918,
+    "Web-XSS": 0.8473067224182843
+  },
+  "rare_macro_ap": 0.8033784940185933,
+  "source": "llm_sft_filt",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 3,
+  "train_rows": 122761,
+  "n_synth": 1361,
+  "train_time_s": 4.781505118997302
+}

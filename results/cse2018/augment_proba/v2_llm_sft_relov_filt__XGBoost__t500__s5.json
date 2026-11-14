@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9042737031005949,
+  "macro_f1": 0.8406327460503203,
+  "weighted_f1": 0.8973912354049023,
+  "rare_macro_f1": 0.7511806040299688,
+  "rare_macro_recall": 0.8359415981815002,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8648229788898752,
+      "recall": 0.95795,
+      "f1": 0.9090075201050126,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993004547044421,
+      "recall": 0.99995,
+      "f1": 0.9996251218354035,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8118364580980348,
+      "recall": 0.5455373406193078,
+      "f1": 0.6525646845211076,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999749937484,
+      "recall": 0.99965,
+      "f1": 0.9997749718714839,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9090909090909091,
+      "recall": 0.9302325581395349,
+      "f1": 0.9195402298850575,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.2222222222222222,
+      "recall": 0.5714285714285714,
+      "f1": 0.32,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.8421052631578947,
+      "recall": 0.8421052631578947,
+      "f1": 0.8421052631578947,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.5,
+  "rare_macro_precision": 0.7076403129034707,
+  "ap": {
+    "FTP-BruteForce": 0.9811507936507938,
+    "Web-BruteForce": 0.9465066455169293,
+    "Web-SQLi": 0.5549661805384499,
+    "Web-XSS": 0.8750110055063615
+  },
+  "rare_macro_ap": 0.8394086563031335,
+  "source": "v2_llm_sft_relov_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 5,
+  "train_rows": 122660,
+  "n_synth": 1260,
+  "train_time_s": 4.1428345260210335
+}

@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9048635804725665,
+  "macro_f1": 0.8797136768323198,
+  "weighted_f1": 0.8973827156758128,
+  "rare_macro_f1": 0.8407807052385365,
+  "rare_macro_recall": 0.8754152823920265,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8628001853041828,
+      "recall": 0.9622666666666667,
+      "f1": 0.9098229551596713,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994003298185997,
+      "recall": 0.99995,
+      "f1": 0.9996750893504286,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9903660886319846,
+      "f1": 0.995159728944821,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8250642573409144,
+      "recall": 0.5359744990892532,
+      "f1": 0.6498175014569212,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.999849992499625,
+      "recall": 0.9998,
+      "f1": 0.9998249956248906,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 1.0,
+      "recall": 0.9302325581395349,
+      "f1": 0.963855421686747,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.5714285714285714,
+      "recall": 0.5714285714285714,
+      "f1": 0.5714285714285714,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.8260869565217391,
+      "recall": 1.0,
+      "f1": 0.9047619047619048,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.0,
+  "rare_macro_precision": 0.813664596273292,
+  "ap": {
+    "FTP-BruteForce": 0.988095238095238,
+    "Web-BruteForce": 0.963932832236712,
+    "Web-SQLi": 0.5911813390853257,
+    "Web-XSS": 0.9606048245835601
+  },
+  "rare_macro_ap": 0.875953558500209,
+  "source": "smote",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 2,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 4.998907572997268
+}

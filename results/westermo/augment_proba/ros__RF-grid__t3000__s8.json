@@ -1,0 +1,48 @@
+{
+  "accuracy": 0.9953884633421917,
+  "macro_f1": 0.9751958031275845,
+  "weighted_f1": 0.9953726811519045,
+  "rare_macro_f1": 0.9677102101169043,
+  "rare_macro_recall": 0.9627683914029258,
+  "per_class": {
+    "Benign": {
+      "precision": 0.9972024185542822,
+      "recall": 0.9981031523800922,
+      "f1": 0.9976525821596244,
+      "support": 11071
+    },
+    "MITM": {
+      "precision": 0.9375,
+      "recall": 0.9154929577464789,
+      "f1": 0.9263657957244655,
+      "support": 213
+    },
+    "PortScan": {
+      "precision": 0.9941089837997055,
+      "recall": 0.982532751091703,
+      "f1": 0.9882869692532943,
+      "support": 687
+    },
+    "SSH-BruteForce": {
+      "precision": 0.986682808716707,
+      "recall": 0.9902794653705954,
+      "f1": 0.9884778653729533,
+      "support": 823
+    }
+  },
+  "fp_benign_per_10k": 18.968476199078673,
+  "rare_macro_precision": 0.9727639308388042,
+  "ap": {
+    "MITM": 0.9844417182545163,
+    "PortScan": 0.9882376610520007,
+    "SSH-BruteForce": 0.9971634049753613
+  },
+  "rare_macro_ap": 0.9899475947606261,
+  "source": "ros",
+  "detector": "RF-grid",
+  "target": 3000,
+  "seed": 8,
+  "train_rows": 34878,
+  "n_synth": 4926,
+  "train_time_s": 0.5578828850000264
+}

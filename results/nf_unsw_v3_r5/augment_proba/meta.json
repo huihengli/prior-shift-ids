@@ -1,0 +1,20 @@
+{
+  "labels": [
+    "Analysis",
+    "Backdoor",
+    "Benign",
+    "DoS",
+    "Exploits",
+    "Fuzzers",
+    "Generic",
+    "Reconnaissance",
+    "Shellcode",
+    "Worms"
+  ],
+  "rare": [
+    "Analysis",
+    "Backdoor",
+    "Shellcode",
+    "Worms"
+  ]
+}

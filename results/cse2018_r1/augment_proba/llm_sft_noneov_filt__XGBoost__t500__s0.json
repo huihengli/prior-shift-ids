@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9049798943205609,
+  "macro_f1": 0.8479396600099944,
+  "weighted_f1": 0.8989954566518727,
+  "rare_macro_f1": 0.7652720381024407,
+  "rare_macro_recall": 0.8490994929183423,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8690248275442914,
+      "recall": 0.9532333333333334,
+      "f1": 0.9091833977140859,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.999450247388675,
+      "recall": 0.9999,
+      "f1": 0.9996750731085505,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8002009473230945,
+      "recall": 0.5641570532280915,
+      "f1": 0.6617603418600511,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998499699939988,
+      "recall": 0.99965,
+      "f1": 0.9997499749974997,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9302325581395349,
+      "recall": 0.9302325581395349,
+      "f1": 0.9302325581395349,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.36363636363636365,
+      "recall": 0.5714285714285714,
+      "f1": 0.4444444444444444,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.7727272727272727,
+      "recall": 0.8947368421052632,
+      "f1": 0.8292682926829268,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.1666666666666665,
+  "rare_macro_precision": 0.7041490486257929,
+  "ap": {
+    "FTP-BruteForce": 0.8750545750545752,
+    "Web-BruteForce": 0.9669350198328212,
+    "Web-SQLi": 0.5922166243278849,
+    "Web-XSS": 0.9223338729202313
+  },
+  "rare_macro_ap": 0.8391350230338781,
+  "source": "llm_sft_noneov_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 0,
+  "train_rows": 122646,
+  "n_synth": 1246,
+  "train_time_s": 4.241052062017843
+}

@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9047971154165697,
+  "macro_f1": 0.8547513672625908,
+  "weighted_f1": 0.8970235242147373,
+  "rare_macro_f1": 0.7851696176164261,
+  "rare_macro_recall": 0.8754152823920265,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8617385862438908,
+      "recall": 0.9638833333333333,
+      "f1": 0.9099534268991126,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994003597841296,
+      "recall": 1.0,
+      "f1": 0.9997000899730081,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9903660886319846,
+      "f1": 0.995159728944821,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.830258886865648,
+      "recall": 0.5306112123052014,
+      "f1": 0.6474455934557802,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.999849992499625,
+      "recall": 0.9998,
+      "f1": 0.9998249956248906,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.8888888888888888,
+      "recall": 0.9302325581395349,
+      "f1": 0.9090909090909091,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.4444444444444444,
+      "recall": 0.5714285714285714,
+      "f1": 0.5,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.6785714285714286,
+      "recall": 1.0,
+      "f1": 0.8085106382978723,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.8333333333333333,
+  "rare_macro_precision": 0.7172619047619049,
+  "ap": {
+    "FTP-BruteForce": 0.8205026455026455,
+    "Web-BruteForce": 0.9221233778051149,
+    "Web-SQLi": 0.5074519233955795,
+    "Web-XSS": 0.9120850694848576
+  },
+  "rare_macro_ap": 0.7905407540470494,
+  "source": "adasyn",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 9,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 5.462412552966271
+}

@@ -1,0 +1,11 @@
+dataset,space,n_features,class,n_train,purity_mean,purity_median,frac_below_0.5,top_other_neighbours
+cic2017,d10,10,Heartbleed,8,0.7,0.7,0.0,Benign 0.30
+cic2017,d10,10,Infiltration,25,0.36,0.4,0.56,Benign 0.62; Heartbleed 0.02
+cic2017,d10,10,Web-BruteForce,954,0.5513626834381551,0.5,0.3480083857442348,Benign 0.24; Web-XSS 0.20
+cic2017,d10,10,Web-SQLi,11,0.07272727272727274,0.0,1.0,Benign 0.32; DoS GoldenEye 0.32
+cic2017,d10,10,Web-XSS,435,0.30045977011494257,0.3,0.8367816091954023,Web-BruteForce 0.43; Benign 0.26
+cic2017,full,74,Heartbleed,8,0.7,0.7,0.0,Benign 0.30
+cic2017,full,74,Infiltration,25,0.23200000000000004,0.3,0.88,Benign 0.66; Heartbleed 0.04
+cic2017,full,74,Web-BruteForce,954,0.7162473794549266,0.7,0.10167714884696016,Web-XSS 0.27; Benign 0.00
+cic2017,full,74,Web-SQLi,11,0.06363636363636363,0.1,1.0,DoS GoldenEye 0.43; Benign 0.22
+cic2017,full,74,Web-XSS,435,0.3724137931034483,0.4,0.6919540229885057,Web-BruteForce 0.61; DoS GoldenEye 0.01

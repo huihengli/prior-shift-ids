@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.8935312884251105,
+  "macro_f1": 0.8680651399091726,
+  "weighted_f1": 0.8907987445649216,
+  "rare_macro_f1": 0.8163948038291624,
+  "rare_macro_recall": 0.9227574750830565,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8763376552955999,
+      "recall": 0.9158166666666666,
+      "f1": 0.8956423233335778,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994999499949995,
+      "recall": 0.9994,
+      "f1": 0.9994499724986249,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9980732177263969,
+      "f1": 0.9990356798457087,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.7050921037193476,
+      "recall": 0.6081258854482898,
+      "f1": 0.6530290681879924,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.99985,
+      "recall": 0.99985,
+      "f1": 0.99985,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.84,
+      "recall": 0.9767441860465116,
+      "f1": 0.9032258064516129,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.45454545454545453,
+      "recall": 0.7142857142857143,
+      "f1": 0.5555555555555556,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.7916666666666666,
+      "recall": 1.0,
+      "f1": 0.8837209302325582,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.5,
+  "rare_macro_precision": 0.7358387445887445,
+  "ap": {
+    "FTP-BruteForce": 0.9230769230769231,
+    "Web-BruteForce": 0.982149591451917,
+    "Web-SQLi": 0.6616518685097372,
+    "Web-XSS": 0.8574846206425154
+  },
+  "rare_macro_ap": 0.8560907509202733,
+  "source": "llm_sft_llama_noneov_filt",
+  "detector": "RF-grid",
+  "target": 500,
+  "seed": 0,
+  "train_rows": 122659,
+  "n_synth": 1259,
+  "train_time_s": 27.949088479042985
+}

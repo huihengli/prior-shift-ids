@@ -1,0 +1,35 @@
+{
+  "raw_rows": 2365424,
+  "after_clean": 2365424,
+  "raw_label_counts": {
+    "Benign": 2237731,
+    "Exploits": 42748,
+    "Fuzzers": 33816,
+    "Generic": 19651,
+    "Reconnaissance": 17074,
+    "DoS": 5980,
+    "Backdoor": 4659,
+    "Shellcode": 2381,
+    "Analysis": 1226,
+    "Worms": 158
+  },
+  "after_dedup": 1013225,
+  "conflict_rows_removed": 8384,
+  "final_unique_rows": 1004841,
+  "dedup_label_counts": {
+    "Benign": 925619,
+    "Exploits": 35443,
+    "Fuzzers": 20742,
+    "Reconnaissance": 7050,
+    "Generic": 4830,
+    "DoS": 4668,
+    "Backdoor": 3149,
+    "Shellcode": 1975,
+    "Analysis": 1224,
+    "Worms": 141
+  },
+  "dropped_classes": [],
+  "train_rows": 110646,
+  "test_rows": 83766,
+  "train_test_overlap": 0
+}

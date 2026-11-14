@@ -1,0 +1,27 @@
+{
+ "dataset": "cic2017",
+ "rare": [
+  "Heartbleed",
+  "Infiltration",
+  "Web-BruteForce",
+  "Web-SQLi",
+  "Web-XSS"
+ ],
+ "n_naive": 2830628,
+ "n_clean": 2233488,
+ "class_naive": {
+  "Heartbleed": 11,
+  "Infiltration": 36,
+  "Web-BruteForce": 1507,
+  "Web-SQLi": 21,
+  "Web-XSS": 652
+ },
+ "class_clean": {
+  "Heartbleed": 11,
+  "Infiltration": 36,
+  "Web-BruteForce": 1363,
+  "Web-SQLi": 15,
+  "Web-XSS": 621
+ },
+ "conflict_rows": 3189
+}

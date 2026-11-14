@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9047389584925726,
+  "macro_f1": 0.8675573040613824,
+  "weighted_f1": 0.898543634137325,
+  "rare_macro_f1": 0.810064935064935,
+  "rare_macro_recall": 0.8738852946319285,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8680272315133504,
+      "recall": 0.95415,
+      "f1": 0.9090533770533453,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9996001399510172,
+      "recall": 0.99995,
+      "f1": 0.9997750393681106,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8017541316323572,
+      "recall": 0.5596539162112932,
+      "f1": 0.6591775923718712,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9997999799979999,
+      "recall": 0.9997,
+      "f1": 0.9997499874993749,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9333333333333333,
+      "recall": 0.9767441860465116,
+      "f1": 0.9545454545454546,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.5714285714285714,
+      "recall": 0.5714285714285714,
+      "f1": 0.5714285714285714,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.782608695652174,
+      "recall": 0.9473684210526315,
+      "f1": 0.8571428571428571,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.6666666666666665,
+  "rare_macro_precision": 0.7593426501035196,
+  "ap": {
+    "FTP-BruteForce": 0.9515873015873015,
+    "Web-BruteForce": 0.9816222348269994,
+    "Web-SQLi": 0.6032100065195457,
+    "Web-XSS": 0.92596443552059
+  },
+  "rare_macro_ap": 0.8655959946136091,
+  "source": "llm_sft_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 4,
+  "train_rows": 122721,
+  "n_synth": 1321,
+  "train_time_s": 3.9020866230130196
+}

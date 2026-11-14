@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9046891097005749,
+  "macro_f1": 0.8486646682637146,
+  "weighted_f1": 0.8975074102251264,
+  "rare_macro_f1": 0.7693769861126455,
+  "rare_macro_recall": 0.8323570554292707,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8638353371510809,
+      "recall": 0.9603833333333334,
+      "f1": 0.9095544015279465,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994501099780044,
+      "recall": 0.99965,
+      "f1": 0.9995500449955005,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.819331595891461,
+      "recall": 0.5408318154219793,
+      "f1": 0.651569643401402,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999799959992,
+      "recall": 0.9997,
+      "f1": 0.9997999799979999,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.8913043478260869,
+      "recall": 0.9534883720930233,
+      "f1": 0.9213483146067416,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.21428571428571427,
+      "recall": 0.42857142857142855,
+      "f1": 0.2857142857142857,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9473684210526315,
+      "recall": 0.9473684210526315,
+      "f1": 0.9473684210526315,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 2.0,
+  "rare_macro_precision": 0.7275253350768225,
+  "ap": {
+    "FTP-BruteForce": 0.9108877233877233,
+    "Web-BruteForce": 0.9569324869729409,
+    "Web-SQLi": 0.21992678217494926,
+    "Web-XSS": 0.9196957336744692
+  },
+  "rare_macro_ap": 0.7518606815525206,
+  "source": "ctgan",
+  "detector": "SAORF",
+  "target": 500,
+  "seed": 4,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 17.096852184040472
+}

@@ -1,0 +1,14 @@
+# 本机 / 实验机 CPU 部分（Windows 或 Linux，Python 3.9+）
+numpy
+pandas
+pyyaml
+scipy
+scikit-learn
+xgboost
+lightgbm
+optuna
+imbalanced-learn
+tabulate
+matplotlib
+# 可选：CTGAN/TVAE 基线（会装 CPU 版 torch，约 1GB；建议在实验机上跑）
+# sdv

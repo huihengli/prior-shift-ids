@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9048469642085674,
+  "macro_f1": 0.8648882270933991,
+  "weighted_f1": 0.8977519696486581,
+  "rare_macro_f1": 0.8055806182121971,
+  "rare_macro_recall": 0.8359415981815002,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8642651383304327,
+      "recall": 0.9600833333333333,
+      "f1": 0.9096579603954142,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9993501949415176,
+      "recall": 0.99965,
+      "f1": 0.9995000749887517,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.9230769230769231,
+      "recall": 1.0,
+      "f1": 0.96,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8184314922184925,
+      "recall": 0.5428051001821493,
+      "f1": 0.6527135556096374,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999799959992,
+      "recall": 0.9997,
+      "f1": 0.9997999799979999,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.975609756097561,
+      "recall": 0.9302325581395349,
+      "f1": 0.9523809523809523,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5714285714285714,
+      "f1": 0.42105263157894735,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.9411764705882353,
+      "recall": 0.8421052631578947,
+      "f1": 0.8888888888888888,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.1666666666666667,
+  "rare_macro_precision": 0.7932991207740132,
+  "ap": {
+    "FTP-BruteForce": 0.9935897435897436,
+    "Web-BruteForce": 0.9562869877616461,
+    "Web-SQLi": 0.5467212764502786,
+    "Web-XSS": 0.914538271868808
+  },
+  "rare_macro_ap": 0.852784069917619,
+  "source": "llm_sft_llama_relov_filt",
+  "detector": "SAORF",
+  "target": 500,
+  "seed": 9,
+  "train_rows": 122643,
+  "n_synth": 1243,
+  "train_time_s": 16.87360239995178
+}

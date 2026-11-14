@@ -1,0 +1,56 @@
+% Fig. 5 阈值移动 vs 重新加权（原划分，10 种子）：上行 ΔF1，下行 ΔPR-AUC（均相对不增强）
+% 只调阈值（cvps）不重新训练、不改变分数，因此 ΔPR-AUC 恒为 0（下行不画）
+% 数据：data/fig5_<数据集>.dat（由 prep_figs.py 生成）；编译：pdflatex fig5_threshold.tex
+\documentclass[10pt]{standalone}
+\input{fig_style}
+\definecolor{cCVPS}{HTML}{6250D6}
+\begin{document}
+\begin{tikzpicture}
+\pgfplotsset{
+  f5/.style={paper, ybar, /pgf/bar width=5.2pt, scaled y ticks=false,
+    xtick={0,1,2,3}, xticklabels={SAORF, RF-grid, LGBM, XGB}, xmin=-0.55, xmax=3.55,
+    yticklabel style={/pgf/number format/fixed, /pgf/number format/fixed zerofill, /pgf/number format/precision=2, /pgf/number format/showpos},
+    extra y ticks={0}, extra y tick labels={},
+    extra y tick style={grid=major, major grid style={cTEXT!70, line width=0.6pt}}},
+  bCW/.style={fill=cCW, draw=white, line width=0.3pt, bar shift=-5.7pt},
+  bROS/.style={fill=cROS, draw=white, line width=0.3pt, bar shift=0pt},
+  bCVPS/.style={fill=cCVPS, draw=white, line width=0.3pt, bar shift=5.7pt,
+                postaction={pattern=north east lines, pattern color=white!85!cCVPS}},
+}
+\begin{groupplot}[
+  group style={group size=3 by 2, horizontal sep=0.55cm, vertical sep=0.45cm,
+               y descriptions at=edge left, x descriptions at=edge bottom},
+  width=5.95cm, height=4.1cm,
+]
+% ---------------- 上行：ΔF1
+\nextgroupplot[f5, xticklabels={}, title={CSE-CIC-IDS2018}, ymin=-0.082, ymax=0.075, ytick={-0.06,-0.03,0,0.03,0.06},
+  ylabel={$\Delta$F1}, ylabel style={yshift=-3pt},
+  legend to name=fig5legend, legend columns=3,
+  legend image code/.code={\draw[#1, draw=none] (0cm,-0.08cm) rectangle (0.24cm,0.12cm);}]
+  \addplot[bCW, errbar] table[x=x, y=df1_cw, y error=df1sd_cw]{data/fig5_cse2018.dat};
+  \addplot[bROS, errbar] table[x=x, y=df1_ros, y error=df1sd_ros]{data/fig5_cse2018.dat};
+  \addplot[bCVPS, errbar] table[x=x, y=df1_cvps, y error=df1sd_cvps]{data/fig5_cse2018.dat};
+  \legend{Class weight (retrain), ROS (retrain), Threshold only (no retraining)}
+\nextgroupplot[f5, xticklabels={}, title={NF-UNSW-NB15-v3}, ymin=-0.082, ymax=0.075, ytick={-0.06,-0.03,0,0.03,0.06}]
+  \addplot[bCW, errbar] table[x=x, y=df1_cw, y error=df1sd_cw]{data/fig5_nf_unsw_v3.dat};
+  \addplot[bROS, errbar] table[x=x, y=df1_ros, y error=df1sd_ros]{data/fig5_nf_unsw_v3.dat};
+  \addplot[bCVPS, errbar] table[x=x, y=df1_cvps, y error=df1sd_cvps]{data/fig5_nf_unsw_v3.dat};
+\nextgroupplot[f5, xticklabels={}, title={CIC-IDS2017}, ymin=-0.082, ymax=0.075, ytick={-0.06,-0.03,0,0.03,0.06}]
+  \addplot[bCW, errbar] table[x=x, y=df1_cw, y error=df1sd_cw]{data/fig5_cic2017.dat};
+  \addplot[bROS, errbar] table[x=x, y=df1_ros, y error=df1sd_ros]{data/fig5_cic2017.dat};
+  \addplot[bCVPS, errbar] table[x=x, y=df1_cvps, y error=df1sd_cvps]{data/fig5_cic2017.dat};
+% ---------------- 下行：ΔPR-AUC
+\nextgroupplot[f5, ymin=-0.082, ymax=0.075, ytick={-0.06,-0.03,0,0.03,0.06},
+  ylabel={$\Delta$PR-AUC}, ylabel style={yshift=-3pt}]
+  \addplot[bCW, errbar] table[x=x, y=dap_cw, y error=dapsd_cw]{data/fig5_cse2018.dat};
+  \addplot[bROS, errbar] table[x=x, y=dap_ros, y error=dapsd_ros]{data/fig5_cse2018.dat};
+\nextgroupplot[f5, ymin=-0.082, ymax=0.075, ytick={-0.06,-0.03,0,0.03,0.06}]
+  \addplot[bCW, errbar] table[x=x, y=dap_cw, y error=dapsd_cw]{data/fig5_nf_unsw_v3.dat};
+  \addplot[bROS, errbar] table[x=x, y=dap_ros, y error=dapsd_ros]{data/fig5_nf_unsw_v3.dat};
+\nextgroupplot[f5, ymin=-0.082, ymax=0.075, ytick={-0.06,-0.03,0,0.03,0.06}]
+  \addplot[bCW, errbar] table[x=x, y=dap_cw, y error=dapsd_cw]{data/fig5_cic2017.dat};
+  \addplot[bROS, errbar] table[x=x, y=dap_ros, y error=dapsd_ros]{data/fig5_cic2017.dat};
+\end{groupplot}
+\node[anchor=south] at ($(group c2r1.north)+(0,0.42cm)$) {\pgfplotslegendfromname{fig5legend}};
+\end{tikzpicture}
+\end{document}

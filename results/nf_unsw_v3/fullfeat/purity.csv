@@ -1,0 +1,9 @@
+dataset,space,n_features,class,n_train,purity_mean,purity_median,frac_below_0.5,top_other_neighbours
+nf_unsw_v3,d10,10,Analysis,857,0.31866977829638277,0.3,0.8133022170361727,Exploits 0.34; Fuzzers 0.13
+nf_unsw_v3,d10,10,Backdoor,2204,0.1338021778584392,0.1,0.940562613430127,Exploits 0.34; Fuzzers 0.31
+nf_unsw_v3,d10,10,Shellcode,1383,0.5986984815618221,0.7,0.35936370209689084,Exploits 0.14; Fuzzers 0.08
+nf_unsw_v3,d10,10,Worms,99,0.26565656565656565,0.3,0.8484848484848485,Exploits 0.49; Fuzzers 0.06
+nf_unsw_v3,full,50,Analysis,857,0.3226371061843641,0.3,0.793465577596266,Exploits 0.33; Reconnaissance 0.13
+nf_unsw_v3,full,50,Backdoor,2204,0.15068058076225047,0.1,0.9196914700544465,Exploits 0.34; Fuzzers 0.32
+nf_unsw_v3,full,50,Shellcode,1383,0.6304410701373826,0.8,0.32393347794649313,Exploits 0.13; Fuzzers 0.08
+nf_unsw_v3,full,50,Worms,99,0.44040404040404035,0.5,0.47474747474747475,Exploits 0.34; Fuzzers 0.07

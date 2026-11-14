@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9062344222525007,
+  "macro_f1": 0.8380919842555105,
+  "weighted_f1": 0.8986720454247524,
+  "rare_macro_f1": 0.7446449241592881,
+  "rare_macro_recall": 0.7940818616308212,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8634031382375753,
+      "recall": 0.9647666666666667,
+      "f1": 0.9112748339158087,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994503023337165,
+      "recall": 1.0,
+      "f1": 0.9997250756042089,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.6875,
+      "recall": 0.9166666666666666,
+      "f1": 0.7857142857142857,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8349468713105077,
+      "recall": 0.5367334547662417,
+      "f1": 0.6534232652684099,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999849977497,
+      "recall": 0.99975,
+      "f1": 0.9998249868740156,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9047619047619048,
+      "recall": 0.8837209302325582,
+      "f1": 0.8941176470588236,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.5,
+      "recall": 0.42857142857142855,
+      "f1": 0.46153846153846156,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.75,
+      "recall": 0.9473684210526315,
+      "f1": 0.8372093023255814,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.6666666666666665,
+  "rare_macro_precision": 0.7105654761904762,
+  "ap": {
+    "FTP-BruteForce": 0.8491071428571428,
+    "Web-BruteForce": 0.9126277525115725,
+    "Web-SQLi": 0.4247360457927967,
+    "Web-XSS": 0.9816743613419513
+  },
+  "rare_macro_ap": 0.7920363256258659,
+  "source": "ros",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 3,
+  "train_rows": 123211,
+  "n_synth": 1811,
+  "train_time_s": 4.7549824779853225
+}

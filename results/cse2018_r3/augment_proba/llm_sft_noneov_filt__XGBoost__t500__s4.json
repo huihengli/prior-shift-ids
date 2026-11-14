@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9047057259645741,
+  "macro_f1": 0.8795683141795974,
+  "weighted_f1": 0.898472242241018,
+  "rare_macro_f1": 0.8371995820271682,
+  "rare_macro_recall": 0.9095995803462144,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8678144370519679,
+      "recall": 0.95435,
+      "f1": 0.9090274084598716,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9996000999750062,
+      "recall": 0.99985,
+      "f1": 0.9997250343707037,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.7058823529411765,
+      "recall": 1.0,
+      "f1": 0.8275862068965517,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8021499128413713,
+      "recall": 0.5587937664440397,
+      "f1": 0.6587140641775021,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.9998999899989999,
+      "recall": 0.9998,
+      "f1": 0.999849992499625,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 0.9333333333333333,
+      "recall": 0.9767441860465116,
+      "f1": 0.9545454545454546,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.625,
+      "recall": 0.7142857142857143,
+      "f1": 0.6666666666666666,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 0.8571428571428571,
+      "recall": 0.9473684210526315,
+      "f1": 0.9,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.6666666666666665,
+  "rare_macro_precision": 0.7803396358543417,
+  "ap": {
+    "FTP-BruteForce": 0.9462454212454213,
+    "Web-BruteForce": 0.9795066169857382,
+    "Web-SQLi": 0.7247538677918424,
+    "Web-XSS": 0.9279745217214665
+  },
+  "rare_macro_ap": 0.894620106936117,
+  "source": "llm_sft_noneov_filt",
+  "detector": "XGBoost",
+  "target": 500,
+  "seed": 4,
+  "train_rows": 122622,
+  "n_synth": 1222,
+  "train_time_s": 4.121713837026618
+}

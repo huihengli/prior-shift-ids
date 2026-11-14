@@ -1,0 +1,5 @@
+cls,n_train,purity,frac_lt05,top_other
+MITM,476,0.853,0.128,Benign
+PortScan-Multi,1478,0.905,0.014,PortScan-Single
+PortScan-Single,159,0.228,0.912,PortScan-Multi
+SSH-BruteForce,1971,0.973,0.02,Benign

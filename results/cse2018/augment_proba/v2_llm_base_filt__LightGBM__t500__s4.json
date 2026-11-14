@@ -1,0 +1,79 @@
+{
+  "accuracy": 0.9047306503605729,
+  "macro_f1": 0.840067128467743,
+  "weighted_f1": 0.8970657283517864,
+  "rare_macro_f1": 0.7517811631139945,
+  "rare_macro_recall": 0.7964679139709738,
+  "per_class": {
+    "Benign": {
+      "precision": 0.8619208803662228,
+      "recall": 0.9633833333333334,
+      "f1": 0.9098321305179321,
+      "support": 60000
+    },
+    "DDoS-HOIC": {
+      "precision": 0.9994502199120352,
+      "recall": 0.99985,
+      "f1": 0.9996500699860028,
+      "support": 20000
+    },
+    "DDoS-LOIC-UDP": {
+      "precision": 1.0,
+      "recall": 0.9922928709055877,
+      "f1": 0.9961315280464217,
+      "support": 519
+    },
+    "FTP-BruteForce": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1": 0.9230769230769231,
+      "support": 12
+    },
+    "Infiltration": {
+      "precision": 0.8285534194768358,
+      "recall": 0.5320785266140458,
+      "f1": 0.6480157752033522,
+      "support": 19764
+    },
+    "SSH-BruteForce": {
+      "precision": 0.99985,
+      "recall": 0.99985,
+      "f1": 0.99985,
+      "support": 20000
+    },
+    "Web-BruteForce": {
+      "precision": 1.0,
+      "recall": 0.9302325581395349,
+      "f1": 0.963855421686747,
+      "support": 43
+    },
+    "Web-SQLi": {
+      "precision": 0.21052631578947367,
+      "recall": 0.5714285714285714,
+      "f1": 0.3076923076923077,
+      "support": 7
+    },
+    "Web-XSS": {
+      "precision": 1.0,
+      "recall": 0.6842105263157895,
+      "f1": 0.8125,
+      "support": 19
+    }
+  },
+  "fp_benign_per_10k": 1.6666666666666665,
+  "rare_macro_precision": 0.7669172932330828,
+  "ap": {
+    "FTP-BruteForce": 0.9811507936507936,
+    "Web-BruteForce": 0.9467088525840056,
+    "Web-SQLi": 0.542596893770029,
+    "Web-XSS": 0.9157075940537881
+  },
+  "rare_macro_ap": 0.846541033514654,
+  "source": "v2_llm_base_filt",
+  "detector": "LightGBM",
+  "target": 500,
+  "seed": 4,
+  "train_rows": 122760,
+  "n_synth": 1360,
+  "train_time_s": 4.840041816001758
+}
